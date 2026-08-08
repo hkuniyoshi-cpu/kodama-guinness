@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>声魂ギネスチャレンジ | 沖縄から世界へ</title>
+  <meta name="description" content="カラオケパブ声魂（コダマ）が、2028年カラオケ連続歌唱世界記録に挑戦。2026年153時間チャレンジ参加者募集中。沖縄から世界へ、歌でつなぐ挑戦の3年間。">
+  <meta name="keywords" content="声魂,コダマ,ギネス,世界記録,カラオケ,沖縄,那覇,ギネスチャレンジ,久茂地">
+  <link rel="canonical" href="https://kodama-guinness.search-mania.net/">
+
+  <!-- OGP -->
+  <meta property="og:title" content="声魂ギネスチャレンジ | 沖縄から世界へ">
+  <meta property="og:description" content="カラオケパブ声魂（コダマ）が、2028年カラオケ連続歌唱世界記録に挑戦。2026年153時間チャレンジ参加者募集中。">
+  <meta property="og:url" content="https://kodama-guinness.search-mania.net/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://kodama-guinness.search-mania.net/ogp.png">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="声魂ギネスチャレンジ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="声魂ギネスチャレンジ | 沖縄から世界へ">
+  <meta name="twitter:description" content="2028年、900時間超の連続カラオケ世界記録に挑む。2026年9月21日スタート。">
+  <meta name="twitter:image" content="https://kodama-guinness.search-mania.net/ogp.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "声魂153時間カラオケチャレンジ2026",
+    "description": "カラオケパブ声魂が挑む153時間連続カラオケチャレンジ。2028年ギネス世界記録挑戦への第一歩。",
+    "startDate": "2026-09-21T18:00:00+09:00",
+    "endDate": "2026-09-28T03:00:00+09:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": "カラオケパブ声魂（コダマ）",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "久茂地",
+        "addressLocality": "那覇市",
+        "addressRegion": "沖縄県",
+        "addressCountry": "JP"
+      }
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "カラオケパブ声魂",
+      "url": "https://kodama-guinness.search-mania.net/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "5000",
+      "priceCurrency": "JPY",
+      "url": "https://camp-fire.jp/projects/964817/view",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg:      #050b1e;
+      --bg2:     #0a1228;
+      --bg3:     #0f1940;
+      --gold:    #c9a84c;
+      --gold-lt: #f0cc6e;
+      --gold-dk: #7a6225;
+      --red:     #c41230;
+      --red-lt:  #e8173a;
+      --ink:     #f0ece4;
+      --ink-s:   #b0bed4;
+      --ink-m:   #6478a0;
+      --line:    rgba(201,168,76,.15);
+      --font-serif: "YuMincho","Yu Mincho","游明朝","Hiragino Mincho Pro","ヒラギノ明朝 Pro W3",Georgia,serif;
+      --font-sans:  "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","Meiryo","メイリオ",system-ui,sans-serif;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg:#f8f3e8; --bg2:#ede8d8; --bg3:#e0d8c4;
+        --ink:#0d1428; --ink-s:#2a3a60; --ink-m:#5a6a90;
+        --line:rgba(10,20,60,.12);
+      }
+    }
+    :root[data-theme="dark"]  {
+      --bg:#050b1e; --bg2:#0a1228; --bg3:#0f1940;
+      --ink:#f0ece4; --ink-s:#b0bed4; --ink-m:#6478a0;
+      --line:rgba(201,168,76,.15);
+    }
+    :root[data-theme="light"] {
+      --bg:#f8f3e8; --bg2:#ede8d8; --bg3:#e0d8c4;
+      --ink:#0d1428; --ink-s:#2a3a60; --ink-m:#5a6a90;
+      --line:rgba(10,20,60,.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--bg); color: var(--ink); line-height: 1.75; overflow-x: hidden; transition: background .3s, color .3s; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    h1,h2,h3 { font-family: var(--font-serif); text-wrap: balance; }
+
+    .wrap  { max-width: 1100px; margin: 0 auto; padding: 0 clamp(18px,4vw,56px); }
+    .section { padding: clamp(72px,9vw,128px) 0; position: relative; }
+    .eyebrow { font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); font-weight: 700; font-family: var(--font-sans); }
+    .sec-head { margin-bottom: 56px; }
+    .sec-head h2 { font-size: clamp(28px,4vw,52px); font-weight: 900; line-height: 1.15; margin: 14px 0 0; }
+    .sec-head p  { color: var(--ink-s); font-size: 15px; margin-top: 12px; line-height: 1.8; }
+    .divider { width: 40px; height: 2px; background: linear-gradient(90deg,var(--gold-dk),var(--gold-lt)); margin-top: 20px; }
+
+    /* NAV */
+    #nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 14px 0; transition: background .3s; }
+    #nav.scrolled { background: color-mix(in srgb,var(--bg) 92%,transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo { font-family: var(--font-serif); font-size: 18px; font-weight: 900; color: var(--gold-lt); letter-spacing: .04em; }
+    .nav-logo small { font-size: 10px; letter-spacing: .15em; color: var(--ink-m); font-family: var(--font-sans); margin-left: 8px; font-weight: 400; }
+    .nav-links { display: flex; gap: 28px; align-items: center; font-size: 13px; }
+    .nav-links a { color: var(--ink-s); transition: color .2s; }
+    .nav-links a:hover { color: var(--gold-lt); }
+    .nav-cta { background: var(--red); color: #fff !important; padding: 7px 18px; border-radius: 3px; font-weight: 700; letter-spacing: .05em; transition: background .2s !important; }
+    .nav-cta:hover { background: var(--red-lt) !important; }
+    .theme-btn { background: none; border: 1px solid var(--line); border-radius: 3px; color: var(--ink-m); font-size: 13px; padding: 5px 10px; cursor: pointer; font-family: var(--font-sans); }
+    .theme-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* HERO */
+    #hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 15% 55%, rgba(196,18,48,.22) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 20%, rgba(201,168,76,.14) 0%, transparent 55%);
+    }
+    .hero-phantom {
+      position: absolute; right: -80px; bottom: -80px;
+      font-family: var(--font-serif); font-size: clamp(280px,35vw,600px); font-weight: 900;
+      line-height: 1; color: rgba(201,168,76,.04); pointer-events: none; user-select: none;
+    }
+    .hero-inner { position: relative; z-index: 2; text-align: center; padding: 120px 0 80px; }
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,168,76,.1); border: 1px solid rgba(201,168,76,.28); border-radius: 100px;
+      padding: 5px 18px; font-size: 11px; letter-spacing: .22em; color: var(--gold-lt);
+      margin-bottom: 28px; font-weight: 700; font-family: var(--font-sans);
+    }
+    .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--red-lt); animation: blink 1.4s ease-in-out infinite; flex-shrink: 0; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+    .hero-h1 { font-size: clamp(36px,7vw,88px); font-weight: 900; line-height: 1.08; letter-spacing: -.01em; margin-bottom: 16px; }
+    .hero-h1 .hl { color: var(--gold-lt); display: block; }
+    .hero-h1 .sub { font-size: clamp(14px,2vw,22px); color: var(--ink-s); font-weight: 400; display: block; margin-top: 10px; letter-spacing: .02em; font-family: var(--font-sans); }
+    .hero-tagline { font-size: 15px; color: var(--ink-m); margin-bottom: 52px; line-height: 1.9; }
+    .hero-stats { display: flex; justify-content: center; gap: clamp(24px,5vw,72px); margin-bottom: 48px; flex-wrap: wrap; }
+    .hstat-l { font-size: 11px; letter-spacing: .18em; color: var(--gold); font-weight: 700; margin-bottom: 6px; font-family: var(--font-sans); }
+    .hstat-n { font-family: var(--font-serif); font-size: clamp(38px,6vw,68px); font-weight: 900; color: var(--gold-lt); line-height: 1; }
+    .hstat-u { font-size: 14px; color: var(--ink-s); font-family: var(--font-sans); font-weight: 400; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-red { display: inline-block; background: var(--red); color: #fff; padding: 17px 40px; border-radius: 3px; font-size: 16px; font-weight: 900; letter-spacing: .05em; box-shadow: 0 6px 28px rgba(196,18,48,.4); transition: transform .2s, box-shadow .2s; }
+    .btn-red:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(196,18,48,.5); }
+    .btn-outline { display: inline-block; border: 1.5px solid var(--gold); color: var(--gold-lt); padding: 15px 40px; border-radius: 3px; font-size: 16px; font-weight: 700; letter-spacing: .05em; transition: background .2s, color .2s; }
+    .btn-outline:hover { background: var(--gold); color: var(--bg); }
+    .scroll-hint { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--ink-m); font-size: 10px; letter-spacing: .15em; }
+    .scroll-line { width: 1px; height: 44px; background: linear-gradient(to bottom,var(--gold-dk),transparent); animation: scr-line 2s ease-in-out infinite; }
+    @keyframes scr-line { 0%{transform:scaleY(0);transform-origin:top} 50%{transform:scaleY(1);transform-origin:top} 51%{transform:scaleY(1);transform-origin:bottom} 100%{transform:scaleY(0);transform-origin:bottom} }
+
+    /* COUNTDOWN */
+    #cd-section { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 52px 0; }
+    .cd-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--gold); font-weight: 700; margin-bottom: 24px; font-family: var(--font-sans); }
+    .cd-board {
+      display: flex; justify-content: center; align-items: flex-start; gap: clamp(8px,2vw,32px);
+      background: #02040e; border: 1px solid rgba(201,168,76,.2); border-radius: 4px;
+      padding: clamp(16px,3vw,32px) clamp(20px,4vw,48px); max-width: 680px; margin: 0 auto;
+      box-shadow: 0 0 60px rgba(201,168,76,.06), inset 0 1px 0 rgba(201,168,76,.1);
+    }
+    :root[data-theme="light"] .cd-board { background: #0a0e1a; }
+    .cd-unit { text-align: center; }
+    .cd-digit { font-family: "Courier New",monospace; font-size: clamp(52px,9vw,100px); font-weight: 700; line-height: 1; color: var(--gold-lt); letter-spacing: -.03em; min-width: 2ch; text-shadow: 0 0 30px rgba(201,168,76,.3); }
+    .cd-unit-l { font-size: 10px; letter-spacing: .2em; color: var(--ink-m); margin-top: 8px; font-family: var(--font-sans); }
+    .cd-colon { font-family: "Courier New",monospace; font-size: clamp(40px,7vw,80px); color: var(--gold-dk); line-height: 1; margin-top: 2px; animation: colon-blink .9s step-start infinite; }
+    @keyframes colon-blink { 0%,49%{opacity:1} 50%,100%{opacity:.2} }
+    .cd-date { text-align: center; margin-top: 20px; font-size: 13px; color: var(--ink-m); letter-spacing: .08em; }
+
+    /* ROADMAP */
+    #roadmap { background: var(--bg); }
+    .roadmap-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 64px; }
+    .rm-card { background: var(--bg2); border: 1px solid var(--line); padding: clamp(24px,3vw,44px) clamp(20px,2.5vw,36px); position: relative; overflow: hidden; transition: border-color .3s; }
+    .rm-card:first-child { border-radius: 4px 0 0 4px; }
+    .rm-card:last-child  { border-radius: 0 4px 4px 0; }
+    .rm-card:hover { border-color: rgba(201,168,76,.35); }
+    .rm-card.active { border-color: rgba(196,18,48,.5); background: linear-gradient(135deg,rgba(196,18,48,.07) 0%,var(--bg2) 50%); }
+    .rm-phantom { position: absolute; right: -16px; bottom: -24px; font-family: var(--font-serif); font-size: 140px; font-weight: 900; color: rgba(201,168,76,.04); line-height: 1; pointer-events: none; }
+    .rm-badge { font-size: 10px; letter-spacing: .22em; font-weight: 700; color: var(--ink-m); font-family: var(--font-sans); }
+    .rm-badge.now { color: var(--red-lt); }
+    .rm-year { font-family: var(--font-serif); font-size: clamp(52px,5.5vw,80px); font-weight: 900; color: var(--gold); line-height: 1; margin: 10px 0 2px; }
+    .rm-aniv { font-size: 12px; color: var(--ink-m); letter-spacing: .05em; margin-bottom: 16px; }
+    .rm-hours { font-family: var(--font-serif); font-size: clamp(36px,4vw,56px); font-weight: 900; line-height: 1; color: var(--gold-lt); }
+    .rm-hours span { font-size: 16px; color: var(--ink-s); font-family: var(--font-sans); font-weight: 400; }
+    .rm-detail { font-size: 13px; color: var(--ink-m); margin-top: 12px; line-height: 1.7; }
+    .rm-goal { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 700; color: var(--gold); }
+
+    /* RECORD */
+    #record { background: var(--bg2); }
+    .record-vs { display: grid; grid-template-columns: 1fr 80px 1fr; gap: 0; align-items: stretch; }
+    .rv-box { padding: clamp(28px,4vw,52px); border: 1px solid var(--line); }
+    .rv-box:first-child { border-radius: 4px 0 0 4px; }
+    .rv-box:last-child  { border-radius: 0 4px 4px 0; border-color: rgba(196,18,48,.35); background: linear-gradient(135deg,rgba(196,18,48,.07) 0%,var(--bg2) 60%); }
+    .rv-tag { font-size: 10px; letter-spacing: .22em; font-weight: 700; display: inline-block; padding: 3px 12px; border-radius: 2px; margin-bottom: 20px; font-family: var(--font-sans); }
+    .rv-tag.current   { background: rgba(201,168,76,.12); color: var(--gold); }
+    .rv-tag.challenge { background: rgba(196,18,48,.18); color: var(--red-lt); }
+    .rv-h { font-family: var(--font-serif); font-size: clamp(52px,7vw,92px); font-weight: 900; line-height: 1; color: var(--gold-lt); }
+    .rv-box:last-child .rv-h { color: var(--red-lt); }
+    .rv-sub { font-size: 13px; color: var(--ink-m); margin-top: 10px; line-height: 1.7; }
+    .rv-mid { background: var(--bg3); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; align-items: center; justify-content: center; }
+    .rv-vs { font-family: var(--font-serif); font-size: 28px; font-weight: 900; color: var(--gold-dk); }
+    .rules-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 40px; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+    .rule { padding: 20px 22px; background: var(--bg); border-right: 1px solid var(--line); }
+    .rule:nth-child(3n) { border-right: none; }
+    .rule h4 { font-size: 13px; font-weight: 700; color: var(--gold-lt); margin-bottom: 6px; }
+    .rule p  { font-size: 12px; color: var(--ink-m); line-height: 1.65; }
+
+    /* RECRUIT */
+    #recruit { background: var(--bg); position: relative; overflow: hidden; }
+    .recruit-phantom { position: absolute; left: -60px; top: 50%; transform: translateY(-60%); font-family: var(--font-serif); font-size: clamp(160px,20vw,320px); font-weight: 900; color: rgba(201,168,76,.035); line-height: 1; pointer-events: none; writing-mode: vertical-rl; }
+    .recruit-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; position: relative; z-index: 1; }
+    .recruit-lead { font-family: var(--font-serif); font-size: clamp(20px,2.5vw,30px); font-weight: 900; line-height: 1.5; margin-bottom: 20px; color: var(--gold-lt); }
+    .recruit-lead em { color: var(--red-lt); font-style: normal; }
+    .recruit-body p { font-size: 15px; color: var(--ink-s); line-height: 1.95; margin-bottom: 14px; }
+    .recruit-blockquote { margin: 28px 0; padding: 24px 28px; border-left: 3px solid var(--red); background: rgba(196,18,48,.05); border-radius: 0 4px 4px 0; }
+    .recruit-blockquote p { font-family: var(--font-serif); font-size: clamp(14px,1.8vw,17px); color: var(--gold-lt); line-height: 1.8; margin: 0; font-style: italic; }
+    .recruit-blockquote cite { display: block; font-size: 12px; color: var(--ink-m); margin-top: 10px; font-style: normal; letter-spacing: .07em; }
+    .recruit-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .rtag { border: 1px solid var(--line); padding: 8px 16px; border-radius: 2px; font-size: 13px; color: var(--ink-s); transition: border-color .2s, color .2s; }
+    .rtag:hover { border-color: var(--gold); color: var(--gold-lt); }
+    .recruit-fee { margin-top: 28px; padding: 20px; background: var(--bg2); border: 1px solid var(--line); border-radius: 4px; font-size: 14px; }
+    .recruit-fee .big { font-family: var(--font-serif); font-size: 32px; font-weight: 900; color: var(--gold-lt); }
+    .recruit-fee small { font-size: 12px; color: var(--ink-m); }
+
+    /* 2026 EVENT */
+    #event { background: var(--bg2); }
+    .ev-banner {
+      background: linear-gradient(135deg,rgba(196,18,48,.15) 0%,rgba(10,18,48,.6) 60%,rgba(201,168,76,.08) 100%);
+      border: 1px solid rgba(196,18,48,.3); border-radius: 4px; padding: clamp(32px,5vw,64px);
+      text-align: center; margin-bottom: 40px; position: relative; overflow: hidden;
+    }
+    .ev-ph { position: absolute; right: -30px; bottom: -50px; font-family: "Courier New",monospace; font-size: 200px; font-weight: 700; color: rgba(201,168,76,.04); line-height: 1; pointer-events: none; }
+    .ev-date { color: var(--red-lt); font-size: clamp(12px,1.5vw,16px); font-weight: 700; letter-spacing: .1em; margin-bottom: 10px; font-family: var(--font-sans); }
+    .ev-title { font-family: var(--font-serif); font-size: clamp(28px,5vw,64px); font-weight: 900; line-height: 1.1; margin-bottom: 16px; }
+    .ev-title span { color: var(--gold-lt); }
+    .ev-stats { display: flex; gap: clamp(20px,4vw,56px); justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+    .ev-s .n { font-family: var(--font-serif); font-size: clamp(32px,5vw,56px); font-weight: 900; color: var(--gold-lt); line-height: 1; }
+    .ev-s .l { font-size: 11px; color: var(--ink-m); margin-top: 4px; letter-spacing: .1em; font-family: var(--font-sans); }
+    .ev-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 2px; }
+    .ev-card { background: var(--bg); border: 1px solid var(--line); padding: 24px 28px; }
+    .ev-card:first-child { border-radius: 4px 0 0 0; } .ev-card:nth-child(2) { border-radius: 0 4px 0 0; }
+    .ev-card:nth-child(3) { border-radius: 0 0 0 4px; } .ev-card:last-child { border-radius: 0 0 4px 0; }
+    .ev-card h3 { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; margin-bottom: 10px; font-family: var(--font-sans); }
+    .ev-card .val { font-family: var(--font-serif); font-size: clamp(18px,2.5vw,26px); font-weight: 900; line-height: 1.3; }
+    .ev-card p { font-size: 13px; color: var(--ink-m); margin-top: 8px; line-height: 1.7; }
+
+    /* CHARITY */
+    #charity { background: var(--bg); }
+    .charity-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .charity-h { font-family: var(--font-serif); font-size: clamp(20px,2.5vw,30px); font-weight: 900; line-height: 1.4; margin-bottom: 16px; }
+    .charity-h em { color: var(--red-lt); font-style: normal; }
+    .charity-body p { font-size: 15px; color: var(--ink-s); line-height: 1.95; margin-bottom: 14px; }
+    .c-steps { display: flex; flex-direction: column; gap: 2px; margin-top: 24px; }
+    .c-step { display: flex; gap: 14px; align-items: flex-start; background: var(--bg2); border: 1px solid var(--line); padding: 16px 18px; }
+    .c-step:first-child { border-radius: 4px 4px 0 0; } .c-step:last-child { border-radius: 0 0 4px 4px; }
+    .c-num { width: 28px; height: 28px; background: var(--red); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; flex-shrink: 0; }
+    .c-step-t h4 { font-size: 14px; font-weight: 700; }
+    .c-step-t p  { font-size: 12px; color: var(--ink-m); line-height: 1.6; margin-top: 2px; }
+    .c-card { background: var(--bg2); border: 1px solid var(--line); border-radius: 4px; padding: 32px; }
+    .c-card h3 { font-size: 11px; letter-spacing: .2em; color: var(--gold); font-weight: 700; margin-bottom: 20px; font-family: var(--font-sans); }
+    .c-item { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .c-item:last-child { border-bottom: none; }
+    .c-item-icon { font-size: 20px; width: 28px; flex-shrink: 0; }
+    .c-item h4 { font-size: 13px; font-weight: 700; color: var(--gold-lt); margin-bottom: 3px; }
+    .c-item p  { font-size: 12px; color: var(--ink-m); line-height: 1.65; }
+
+    /* CAMPFIRE */
+    #campfire { background: var(--bg2); text-align: center; }
+    .cf-inner { max-width: 640px; margin: 0 auto; }
+    .cf-goal-label { font-size: 12px; letter-spacing: .2em; color: var(--gold); font-weight: 700; font-family: var(--font-sans); }
+    .cf-goal { font-family: var(--font-serif); font-size: clamp(72px,12vw,140px); font-weight: 900; color: var(--gold-lt); line-height: 1; margin: 20px 0 8px; }
+    .cf-desc { font-size: 15px; color: var(--ink-s); line-height: 1.9; margin: 20px 0 36px; }
+    .uses { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; text-align: left; margin-bottom: 36px; }
+    .use { background: rgba(255,255,255,.03); border: 1px solid var(--line); padding: 12px 14px; border-radius: 3px; font-size: 13px; color: var(--ink-s); line-height: 1.6; display: flex; gap: 8px; }
+    .use strong { color: var(--ink); }
+    .cf-btn { display: inline-flex; align-items: center; gap: 8px; background: #e8541a; color: #fff; padding: 18px 48px; border-radius: 3px; font-size: 17px; font-weight: 900; letter-spacing: .04em; box-shadow: 0 6px 32px rgba(232,84,26,.4); transition: transform .2s, box-shadow .2s; }
+    .cf-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(232,84,26,.5); }
+    .cf-note { font-size: 12px; color: var(--ink-m); margin-top: 16px; line-height: 1.8; }
+
+    /* OWNER */
+    #owner { background: var(--bg); }
+    .owner-wrap { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: start; border: 1px solid var(--line); border-radius: 4px; padding: clamp(32px,4vw,56px); }
+    .owner-ph { background: var(--bg2); border: 1px solid var(--line); border-radius: 3px; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+    .owner-ph .mic { font-size: 64px; filter: drop-shadow(0 0 20px rgba(201,168,76,.35)); }
+    .owner-ph small { font-size: 11px; color: var(--ink-m); }
+    .owner-badge-row { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+    .owner-badge { background: var(--red); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 2px; letter-spacing: .05em; font-family: var(--font-sans); }
+    .owner-name { font-family: var(--font-serif); font-size: clamp(28px,3.5vw,44px); font-weight: 900; margin-bottom: 4px; }
+    .owner-role { font-size: 12px; color: var(--ink-m); letter-spacing: .08em; margin-bottom: 24px; }
+    .owner-msg p { font-size: 15px; color: var(--ink-s); line-height: 2; margin-bottom: 14px; }
+    .owner-msg strong { color: var(--gold-lt); }
+    .owner-msg em { color: var(--red-lt); font-style: normal; }
+    .owner-hl { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
+    .ohl { background: rgba(201,168,76,.07); border-left: 3px solid var(--gold); padding: 12px 16px; font-size: 14px; font-weight: 700; color: var(--gold-lt); border-radius: 0 3px 3px 0; }
+
+    /* ACCESS */
+    #access { background: var(--bg2); }
+    .access-grid { display: grid; grid-template-columns: 1fr 360px; gap: 40px; align-items: start; }
+    .access-info dt { font-size: 11px; letter-spacing: .18em; color: var(--gold); font-weight: 700; margin-top: 20px; margin-bottom: 4px; font-family: var(--font-sans); }
+    .access-info dt:first-child { margin-top: 0; }
+    .access-info dd { font-size: 14px; color: var(--ink-s); line-height: 1.7; }
+    .map-placeholder { background: var(--bg3); border: 1px solid var(--line); border-radius: 4px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; color: var(--ink-m); font-size: 13px; letter-spacing: .05em; }
+
+    /* FOOTER */
+    footer { background: #02040e; border-top: 1px solid var(--line); padding: 48px 0 24px; text-align: center; }
+    :root[data-theme="light"] footer { background: var(--bg2); }
+    .footer-logo { font-family: var(--font-serif); font-size: 22px; font-weight: 900; color: var(--gold-lt); margin-bottom: 6px; }
+    .footer-sub { font-size: 11px; letter-spacing: .18em; color: var(--ink-m); margin-bottom: 28px; }
+    .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
+    .footer-links a { font-size: 12px; color: var(--ink-m); transition: color .2s; }
+    .footer-links a:hover { color: var(--gold-lt); }
+    .partner-notice-inline { font-size: 12px; color: var(--ink-m); line-height: 1.8; margin-bottom: 12px; }
+    .copyright { font-size: 11px; color: var(--ink-m); opacity: .45; margin-top: 20px; }
+    .produced-by { font-size: 11px; color: var(--ink-m); opacity: .35; margin-top: 8px; }
+    .produced-by a { color: var(--gold-dk); }
+
+    /* REVEAL */
+    .rv { opacity: 0; transform: translateY(20px); transition: opacity .65s ease, transform .65s ease; }
+    .rv.in { opacity: 1; transform: none; }
+    .rv-d2 { transition-delay: .12s; }
+    .rv-d3 { transition-delay: .22s; }
+
+    /* MOBILE */
+    @media (max-width: 880px) {
+      .roadmap-grid { grid-template-columns: 1fr; }
+      .rm-card:first-child { border-radius: 4px 4px 0 0; }
+      .rm-card:last-child  { border-radius: 0 0 4px 4px; }
+      .record-vs { grid-template-columns: 1fr; }
+      .rv-box:first-child { border-radius: 4px 4px 0 0; }
+      .rv-box:last-child  { border-radius: 0 0 4px 4px; }
+      .rv-mid { padding: 16px; }
+      .rules-grid { grid-template-columns: 1fr 1fr; }
+      .recruit-inner { grid-template-columns: 1fr; }
+      .charity-grid { grid-template-columns: 1fr; }
+      .owner-wrap { grid-template-columns: 1fr; }
+      .owner-ph { aspect-ratio: 16/9; }
+      .ev-grid { grid-template-columns: 1fr; }
+      .uses { grid-template-columns: 1fr; }
+      .access-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero-inner { padding: 100px 0 60px; }
+    }
+    @media (max-width: 560px) {
+      .rules-grid { grid-template-columns: 1fr; }
+      .rule { border-right: none; border-bottom: 1px solid var(--line); }
+      .cd-board { gap: 6px; padding: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, .rv { transition: none !important; animation: none !important; }
+      .rv { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="nav-logo">声魂 <small>GUINNESS CHALLENGE</small></a>
+    <div class="nav-links">
+      <a href="#roadmap">ロードマップ</a>
+      <a href="#recruit">参加募集</a>
+      <a href="#charity">チャリティ</a>
+      <a href="#owner">オーナー</a>
+      <a href="https://camp-fire.jp/projects/964817/view" target="_blank" rel="noopener" class="nav-cta">応援する →</a>
+      <button class="theme-btn" id="themeBtn" aria-label="テーマ切替">☀ / ☾</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="section">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-phantom" aria-hidden="true">魂</div>
+  <div class="wrap hero-inner">
+    <div class="hero-tag">🎤 OKINAWA × GUINNESS WORLD RECORD 2028</div>
+    <h1 class="hero-h1 rv">
+      <span class="hl">沖縄から、世界へ。</span>
+      歌でつなぐ、<br>未来の子どもたちへ。
+      <span class="sub">カラオケパブ声魂（コダマ）が挑むギネス世界記録への3年間</span>
+    </h1>
+    <p class="hero-tagline rv rv-d2">挑戦する大人の背中が、子どもたちの勇気になる。</p>
+    <div class="hero-stats rv rv-d2">
+      <div>
+        <div class="hstat-l">2026年目標</div>
+        <div class="hstat-n">153<span class="hstat-u">時間</span></div>
+      </div>
+      <div>
+        <div class="hstat-l">2028年ギネス目標</div>
+        <div class="hstat-n">900<span class="hstat-u">時間超</span></div>
+      </div>
+      <div>
+        <div class="hstat-l">現世界記録</div>
+        <div class="hstat-n">895<span class="hstat-u">h 2m</span></div>
+      </div>
+    </div>
+    <div class="hero-btns rv rv-d3">
+      <a href="#recruit" class="btn-red">参加者募集中 →</a>
+      <a href="https://camp-fire.jp/projects/964817/view" target="_blank" rel="noopener" class="btn-outline">Campfireで応援する</a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><div class="scroll-line"></div><span>SCROLL</span></div>
+</section>
+
+<!-- COUNTDOWN -->
+<div id="cd-section">
+  <div class="wrap">
+    <div class="cd-label">⏱&ensp;2026年・153時間チャレンジ スタートまで</div>
+    <div class="cd-board" role="timer" aria-live="polite" aria-label="カウントダウン">
+      <div class="cd-unit"><div class="cd-digit" id="cd-d">000</div><div class="cd-unit-l">日</div></div>
+      <div class="cd-colon" aria-hidden="true">:</div>
+      <div class="cd-unit"><div class="cd-digit" id="cd-h">00</div><div class="cd-unit-l">時間</div></div>
+      <div class="cd-colon" aria-hidden="true">:</div>
+      <div class="cd-unit"><div class="cd-digit" id="cd-m">00</div><div class="cd-unit-l">分</div></div>
+      <div class="cd-colon" aria-hidden="true">:</div>
+      <div class="cd-unit"><div class="cd-digit" id="cd-s">00</div><div class="cd-unit-l">秒</div></div>
+    </div>
+    <div class="cd-date">2026年9月21日（月）18:00 スタート ／ 9月28日（日）3:00 フィニッシュ</div>
+  </div>
+</div>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">3-Year Journey</p>
+      <h2>未来へのステップ</h2>
+      <p>仲間とともに一歩ずつ積み重ね、世界への挑戦へつなぐ3年間のロードマップ</p>
+      <div class="divider"></div>
+    </div>
+    <div class="roadmap-grid">
+      <div class="rm-card active rv">
+        <div class="rm-phantom" aria-hidden="true">153</div>
+        <div class="rm-badge now">STEP 01 ▸ 今ここ</div>
+        <div class="rm-year">2026</div>
+        <div class="rm-aniv">18周年記念</div>
+        <div class="rm-hours">153<span>時間</span></div>
+        <div class="rm-detail">2026年9月21日〜28日。全国から200名を集め、153時間連続カラオケ。必要な体制すべてを実地検証。</div>
+        <div class="rm-goal">🎯 沖縄一を目指す</div>
+      </div>
+      <div class="rm-card rv rv-d2">
+        <div class="rm-phantom" aria-hidden="true">504</div>
+        <div class="rm-badge">STEP 02</div>
+        <div class="rm-year">2027</div>
+        <div class="rm-aniv">19周年・強化年</div>
+        <div class="rm-hours">504<span>時間</span></div>
+        <div class="rm-detail">2026年の経験・データをもとに体制強化。全国から240名が集まるイベントへ。</div>
+        <div class="rm-goal">🏅 日本一を目指す</div>
+      </div>
+      <div class="rm-card rv rv-d3">
+        <div class="rm-phantom" aria-hidden="true">900</div>
+        <div class="rm-badge">STEP 03 ▸ 本番</div>
+        <div class="rm-year">2028</div>
+        <div class="rm-aniv">20周年・ギネス本番</div>
+        <div class="rm-hours">900<span>時間超</span></div>
+        <div class="rm-detail">約38日間の連続カラオケ。3年間でつながった仲間400名と、沖縄から世界へ。</div>
+        <div class="rm-goal">🌍 世界一へ挑戦！</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECORD -->
+<section id="record" class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Guinness World Record</p>
+      <h2>現在の世界記録と私たちの目標</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="record-vs rv">
+      <div class="rv-box">
+        <span class="rv-tag current">現在の世界記録</span>
+        <div class="rv-h">895<small style="font-size:.35em;color:var(--ink-s);">h 2m</small></div>
+        <div class="rv-sub">Virag Madhumalati<br>ナビムンバイ・インド<br>2019年12月達成</div>
+      </div>
+      <div class="rv-mid"><div class="rv-vs">VS</div></div>
+      <div class="rv-box">
+        <span class="rv-tag challenge">声魂の目標（2028年）</span>
+        <div class="rv-h">900<small style="font-size:.3em;color:var(--ink-s);">時間超</small></div>
+        <div class="rv-sub">カラオケパブ声魂（コダマ）<br>那覇市久茂地・沖縄<br>2028年・声魂20周年</div>
+      </div>
+    </div>
+    <div class="rules-grid rv">
+      <div class="rule"><h4>🎵 曲間ルール</h4><p>曲と曲の間隔は最大30秒以内。1曲あたり最低2分以上。</p></div>
+      <div class="rule"><h4>🔄 同曲禁止</h4><p>同じ曲は4時間以内に繰り返し不可。膨大な曲目が必要。</p></div>
+      <div class="rule"><h4>👁️ 常時立会証人</h4><p>独立した証人を常時2名以上。全時間帯で交代配置。</p></div>
+      <div class="rule"><h4>📹 全時間映像録画</h4><p>途切れない映像記録が必須。バックアップカメラも必要。</p></div>
+      <div class="rule"><h4>📋 書類一式</h4><p>歌唱ログ・タイムキーパー声明・スチュワード声明など多数。</p></div>
+      <div class="rule"><h4>🏢 ギネス公式申請</h4><p>法人としての使用権取得・認定審査。現在準備進行中。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2026 EVENT -->
+<section id="event" class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">2026 / Step 01</p>
+      <h2>153時間チャレンジ</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="ev-banner rv">
+      <div class="ev-ph" aria-hidden="true">153</div>
+      <div class="ev-date">2026.09.21 Mon 18:00 → 09.28 Sun 3:00</div>
+      <div class="ev-title"><span>153時間</span> 連続カラオケチャレンジ</div>
+      <div class="ev-stats">
+        <div class="ev-s"><div class="n">153</div><div class="l">時間連続</div></div>
+        <div class="ev-s"><div class="n">200</div><div class="l">名参加目標</div></div>
+        <div class="ev-s"><div class="n">7</div><div class="l">日間ノンストップ</div></div>
+        <div class="ev-s"><div class="n">5,000</div><div class="l">円 参加費</div></div>
+      </div>
+    </div>
+    <div class="ev-grid rv">
+      <div class="ev-card">
+        <h3>開催日程</h3>
+        <div class="val">2026年9月21日（月）18:00<br>〜 9月28日（日）3:00</div>
+        <p>声魂18周年記念イベント。開催前にチーム編成・最終作戦会議を実施。</p>
+      </div>
+      <div class="ev-card">
+        <h3>開催場所</h3>
+        <div class="val">カラオケパブ声魂（コダマ）</div>
+        <p>沖縄県那覇市久茂地。18年の歴史をもつカラオケパブが舞台。</p>
+      </div>
+      <div class="ev-card">
+        <h3>参加費</h3>
+        <div class="val">5,000円</div>
+        <p>チャリティ歌唱「1曲100円カンパ」も企画中。カンパ分は全額寄付。</p>
+      </div>
+      <div class="ev-card">
+        <h3>配信</h3>
+        <div class="val">ライブ配信予定</div>
+        <p>著作権等に配慮した形で配信・発信予定。全国から応援を届けてください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RECRUIT -->
+<section id="recruit" class="section">
+  <div class="recruit-phantom" aria-hidden="true">200人</div>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Join Us</p>
+      <h2>参加者募集</h2>
+      <p>未来をつくる200人を、全国から集めています</p>
+      <div class="divider"></div>
+    </div>
+    <div class="recruit-inner">
+      <div class="rv">
+        <div class="recruit-lead">
+          歌が上手い必要はありません。<br>
+          <em>プロである必要もありません。</em>
+        </div>
+        <div class="recruit-body">
+          <p>この挑戦は、私一人では実現できません。一緒に汗をかき、歌をつないでくれる200人の仲間が必要です。</p>
+          <p>記録達成のためだけの200人ではありません。この挑戦に参加し、支え合いながら前へ進む姿を通して、子どもたちへ「挑戦することの楽しさ」を伝えてくれる200人です。</p>
+        </div>
+        <div class="recruit-blockquote">
+          <p>「2028年に世界一へ届いた時、あの最初の153時間チャレンジに、自分も参加していた。世界への土台をつくった一人だった」と、全国で胸を張って語り合える未来をつくりたい。</p>
+          <cite>— 當眞嗣剛（カラオケパブ声魂オーナー）</cite>
+        </div>
+        <div class="recruit-fee">
+          参加費 <span class="big">5,000円</span><br>
+          <small>Campfireページより参加申し込み</small>
+        </div>
+      </div>
+      <div class="rv rv-d2">
+        <p style="font-size:12px;letter-spacing:.2em;color:var(--gold);font-weight:700;margin-bottom:16px;font-family:var(--font-sans);">こんな気持ちがあれば十分です</p>
+        <div class="recruit-tags">
+          <div class="rtag">🎤 歌うことが好き</div>
+          <div class="rtag">🎵 カラオケが好き</div>
+          <div class="rtag">🌺 沖縄が好き</div>
+          <div class="rtag">🌍 世界を目指すなんて面白そう</div>
+          <div class="rtag">💪 誰かに勇気を届けたい</div>
+          <div class="rtag">👶 子どもたちに挑戦する姿を見せたい</div>
+        </div>
+        <div style="margin-top:32px;">
+          <a href="https://camp-fire.jp/projects/964817/view" target="_blank" rel="noopener" class="btn-red" style="width:100%;text-align:center;display:block;box-sizing:border-box;">
+            Campfireで参加・応援する →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHARITY -->
+<section id="charity" class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Charity</p>
+      <h2>歌の力を、未来の力へ。</h2>
+      <p>ひとり親家庭へのリユース制服無償寄贈</p>
+      <div class="divider"></div>
+    </div>
+    <div class="charity-grid">
+      <div class="rv">
+        <div class="charity-h">地域の子どもたちへ、<em>制服を届ける。</em></div>
+        <div class="charity-body">
+          <p>このプロジェクトは、世界記録へ挑む姿を見せるだけで終わりません。地域のひとり親家庭や経済的に厳しい家庭など、さまざまな事情を抱えた子どもたちへ支援をつなげます。</p>
+          <p>チャリティ歌唱（1曲100円カンパ）のカンパ分は全額寄付。ひとり親家庭へのリユース制服の無償寄贈に充当します。</p>
+        </div>
+        <div class="c-steps">
+          <div class="c-step"><div class="c-num">1</div><div class="c-step-t"><h4>対象の方が店頭でお申し込み</h4><p>児童扶養手当受給者証明等を確認</p></div></div>
+          <div class="c-step"><div class="c-num">2</div><div class="c-step-t"><h4>リユース制服を無償でお渡し</h4><p>クリーニング・メンテナンス済みの状態で届ける</p></div></div>
+          <div class="c-step"><div class="c-num">3</div><div class="c-step-t"><h4>在庫がない場合は入荷予約</h4><p>入荷後に連絡のうえお渡し。継続的に実施。</p></div></div>
+        </div>
+      </div>
+      <div class="c-card rv rv-d2">
+        <h3>この挑戦が残すもの</h3>
+        <div class="c-item"><div class="c-item-icon">🏆</div><div><h4>記録はいつか更新される</h4><p>それは挑戦が受け継がれていく証。次の挑戦者へのバトンになる。</p></div></div>
+        <div class="c-item"><div class="c-item-icon">❤️</div><div><h4>子どもの心に生まれた勇気は残る</h4><p>挑戦する大人の姿を見て芽生えた「やってみよう」。それがこのプロジェクトの一番大きな価値。</p></div></div>
+        <div class="c-item"><div class="c-item-icon">🌊</div><div><h4>挑戦の連鎖が生まれる</h4><p>大人が挑戦する→子どもが夢を持つ→成長して次の世代を応援する。その循環を沖縄から。</p></div></div>
+        <div class="c-item"><div class="c-item-icon">🌺</div><div><h4>毎年9月に沖縄が動く</h4><p>「今年も面白い挑戦が始まる」と言われる、挑戦する文化の土台をつくる。</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAMPFIRE -->
+<section id="campfire" class="section">
+  <div class="wrap">
+    <div class="cf-inner">
+      <div class="sec-head rv">
+        <p class="eyebrow">Crowdfunding / Campfire</p>
+        <h2>あなたの応援が、世界一への一歩に。</h2>
+        <div class="divider" style="margin:20px auto 0;"></div>
+      </div>
+      <div class="rv">
+        <div class="cf-goal-label">目標金額</div>
+        <div class="cf-goal">100万円</div>
+        <p class="cf-desc">2026年の153時間チャレンジを安全に実施し、2028年の世界記録挑戦へつなげる準備資金として活用します。</p>
+        <div class="uses">
+          <div class="use">🏢 <span><strong>運営費</strong>：会場費・人件費・電気水道・備品</span></div>
+          <div class="use">🔊 <span><strong>機材レンタル</strong>：音響・照明・カメラ・配信機材</span></div>
+          <div class="use">🎬 <span><strong>映像制作費</strong>：ライブ配信・撮影・編集</span></div>
+          <div class="use">📣 <span><strong>広報費</strong>：チラシ・ポスター・SNS広告</span></div>
+          <div class="use">🥤 <span><strong>安全管理費</strong>：飲料・軽食・休憩・救護体制</span></div>
+          <div class="use">📋 <span><strong>記録申請費</strong>：ルール調査・申請・認定に関する費用</span></div>
+        </div>
+        <a href="https://camp-fire.jp/projects/964817/view" target="_blank" rel="noopener" class="cf-btn">
+          🔥 Campfireで応援する（All-in方式）
+        </a>
+        <div class="cf-note">
+          この挑戦は私たちだけのものではありません。<br>
+          支えてくださる皆さまと共に、夢から未来へ、子どもたちの希望へとつなげていきます。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OWNER -->
+<section id="owner" class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Owner's Message</p>
+      <h2>オーナーメッセージ</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="owner-wrap rv">
+      <div class="owner-ph">
+        <div class="mic">🎤</div>
+        <small>写真掲載予定</small>
+      </div>
+      <div>
+        <div class="owner-badge-row">
+          <span class="owner-badge">カラオケパブ声魂 オーナー</span>
+        </div>
+        <div class="owner-name">當眞 嗣剛</div>
+        <div class="owner-role">那覇市久茂地 ／ 飲食業・カラオケ歴20年以上 ／ 宜野座高校ボランティア講師</div>
+        <div class="owner-msg">
+          <p>カラオケは、ただ歌うだけの場所ではありません。<strong>知らない人同士が同じ歌でつながり、初対面でも肩を組み、笑顔になれる。</strong>声魂は、さまざまな人の人生が交差する温かい場所として18年続いてきました。</p>
+          <p>だからこそ、自分が20年以上携わってきた「カラオケ」という仕事で、沖縄から世界へ挑戦したいと思いました。私が見たいのは<em>記録が認定された瞬間だけではありません。200人が初対面でも歌を通してつながり、笑い合いながら同じ夢に向かう姿</em>——その姿を見た子どもたちが「大人って楽しそう」「自分も何かに挑戦してみたい」と思ってくれる未来です。</p>
+        </div>
+        <div class="owner-hl">
+          <div class="ohl">18周年は沖縄一。19周年は日本一。20周年は世界一。</div>
+          <div class="ohl">世界記録は特別な人だけが挑戦できるものではありません。一歩踏み出し、仲間と力を合わせた人たちがつくるものです。</div>
+          <div class="ohl">皆さまと一緒にマイクを握れる日を、心から楽しみにしています。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section id="access" class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Access</p>
+      <h2>アクセス</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="access-grid rv">
+      <dl class="access-info">
+        <dt>店名</dt><dd>カラオケパブ声魂（コダマ）</dd>
+        <dt>住所</dt><dd>沖縄県那覇市久茂地</dd>
+        <dt>営業時間</dt><dd>詳細はお問い合わせください</dd>
+        <dt>Campfire</dt><dd>
+          <a href="https://camp-fire.jp/projects/964817/view" target="_blank" rel="noopener" style="color:var(--gold-lt);">
+            https://camp-fire.jp/projects/964817/view
+          </a>
+        </dd>
+      </dl>
+      <div class="map-placeholder">📍 Google マップ埋め込み予定</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-logo">声魂 KODAMA</div>
+    <div class="footer-sub">KARAOKE PUB × GUINNESS WORLD RECORD CHALLENGE — OKINAWA</div>
+    <div class="footer-links">
+      <a href="#roadmap">ロードマップ</a>
+      <a href="#recruit">参加募集</a>
+      <a href="#charity">チャリティ</a>
+      <a href="#campfire">Campfire</a>
+      <a href="#owner">オーナー</a>
+      <a href="#access">アクセス</a>
+    </div>
+    <p class="partner-notice-inline">
+      このサイトはカラオケパブ声魂（コダマ）の情報発信を目的に SearchMania Inc. が制作したパートナーサイトです。
+    </p>
+    <div class="copyright">© 2026 カラオケパブ声魂（コダマ）All Rights Reserved.</div>
+    <div class="produced-by">Produced by <a href="https://search-mania.net/" target="_blank" rel="noopener">SearchMania Inc.</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  addEventListener('scroll', function(){ nav.classList.toggle('scrolled', scrollY > 50); }, {passive:true});
+
+  var html = document.documentElement;
+  var stored = localStorage.getItem('kodama-theme');
+  if (stored) html.setAttribute('data-theme', stored);
+  document.getElementById('themeBtn').onclick = function(){
+    var cur = html.getAttribute('data-theme');
+    var next = (cur === 'dark') ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+    localStorage.setItem('kodama-theme', next);
+  };
+
+  /* Countdown — target: 2026-09-21 18:00 JST = UTC 09:00 */
+  var TARGET = new Date('2026-09-21T09:00:00Z');
+  function p(n, w){ return String(n).padStart(w || 2, '0'); }
+  function tick(){
+    var diff = TARGET - Date.now();
+    if (diff < 0) diff = 0;
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor(diff % 86400000 / 3600000);
+    var m = Math.floor(diff % 3600000 / 60000);
+    var s = Math.floor(diff % 60000 / 1000);
+    document.getElementById('cd-d').textContent = p(d, 3);
+    document.getElementById('cd-h').textContent = p(h);
+    document.getElementById('cd-m').textContent = p(m);
+    document.getElementById('cd-s').textContent = p(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  var els = document.querySelectorAll('.rv');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+})();
+</script>
+</body>
+</html>
