@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>声魂ギネスチャレンジ | 沖縄から世界へ</title>
-  <meta name="description" content="カラオケパブ声魂（コダマ）が、2028年カラオケ連続歌唱世界記録に挑戦。2026年153時間チャレンジ参加者募集中。沖縄から世界へ、歌でつなぐ挑戦の3年間。">
-  <meta name="keywords" content="声魂,コダマ,ギネス,世界記録,カラオケ,沖縄,那覇,ギネスチャレンジ,久茂地">
+  <title>沖縄進学支援会オキシン | 歌でつなぐ、進学の光 ／ ギネスに挑む3年間</title>
+  <meta name="description" content="沖縄進学支援会（オキシン）が2028年カラオケ連続歌唱世界記録に挑戦。2026年沖縄一・2027年日本一・2028年世界一の3年計画で、沖縄の進学に悩む家庭への支援活動を広げていきます。会場はカラオケパブ声魂（那覇久茂地）。">
+  <meta name="keywords" content="沖縄進学支援会,オキシン,進学支援,シングルファザー,声魂,ギネス,世界記録,カラオケ,沖縄,那覇,久茂地,當眞嗣剛">
   <link rel="canonical" href="https://kodama-guinness.search-mania.net/">
 
   <!-- OGP -->
-  <meta property="og:title" content="声魂ギネスチャレンジ | 沖縄から世界へ">
-  <meta property="og:description" content="カラオケパブ声魂（コダマ）が、2028年カラオケ連続歌唱世界記録に挑戦。2026年153時間チャレンジ参加者募集中。">
+  <meta property="og:title" content="沖縄進学支援会オキシン | 歌でつなぐ、進学の光">
+  <meta property="og:description" content="沖縄進学支援会（オキシン）が2028年カラオケ世界記録に挑戦。2026年沖縄一→2027年日本一→2028年世界一の3年計画で、沖縄の進学支援を広く社会へ発信します。">
   <meta property="og:url" content="https://kodama-guinness.search-mania.net/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://kodama-guinness.search-mania.net/ogp.png">
   <meta property="og:locale" content="ja_JP">
-  <meta property="og:site_name" content="声魂ギネスチャレンジ">
+  <meta property="og:site_name" content="沖縄進学支援会オキシン">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="声魂ギネスチャレンジ | 沖縄から世界へ">
-  <meta name="twitter:description" content="2028年、900時間超の連続カラオケ世界記録に挑む。2026年9月21日スタート。">
+  <meta name="twitter:title" content="沖縄進学支援会オキシン | 歌でつなぐ、進学の光">
+  <meta name="twitter:description" content="2028年、900時間超のカラオケ世界記録に挑戦。沖縄の進学支援を広めるための3年間。2026年9月21日スタート。">
   <meta name="twitter:image" content="https://kodama-guinness.search-mania.net/ogp.png">
 
   <!-- Favicon -->
@@ -34,8 +34,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Event",
-    "name": "声魂153時間カラオケチャレンジ2026",
-    "description": "カラオケパブ声魂が挑む153時間連続カラオケチャレンジ。2028年ギネス世界記録挑戦への第一歩。",
+    "name": "オキシン主催 153時間カラオケチャレンジ2026（沖縄一）",
+    "description": "沖縄進学支援会（オキシン）主催、カラオケパブ声魂を舞台にした153時間連続カラオケチャレンジ。2028年ギネス世界記録挑戦への3年計画の第一歩。",
     "startDate": "2026-09-21T18:00:00+09:00",
     "endDate": "2026-09-28T03:00:00+09:00",
     "eventStatus": "https://schema.org/EventScheduled",
@@ -53,7 +53,7 @@
     },
     "organizer": {
       "@type": "Organization",
-      "name": "カラオケパブ声魂",
+      "name": "沖縄進学支援会（オキシン）",
       "url": "https://kodama-guinness.search-mania.net/"
     },
     "offers": {
@@ -76,6 +76,9 @@
       --gold-dk: #7a6225;
       --red:     #c41230;
       --red-lt:  #e8173a;
+      --amber:   #e07a1e;
+      --amber-lt:#f7a445;
+      --amber-dk:#7a4210;
       --ink:     #f0ece4;
       --ink-s:   #b0bed4;
       --ink-m:   #6478a0;
@@ -220,6 +223,30 @@
     .hero-h1, .hero-h1 .hl, .rv-h, .rm-year, .cf-goal, .cd2-sub, .ev-title, .owner-name {
       word-break: keep-all;
       overflow-wrap: break-word;
+    }
+
+    /* 日本一 2027 countdown (amber) */
+    #cd3-section { background: linear-gradient(135deg, rgba(224,122,30,.10) 0%, var(--bg) 60%); border-top: 1px solid rgba(224,122,30,.22); border-bottom: 1px solid rgba(224,122,30,.22); padding: 52px 0; }
+    .cd3-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--amber-lt); font-weight: 700; margin-bottom: 8px; font-family: var(--font-sans); }
+    .cd3-sub { text-align: center; font-size: clamp(24px,3.4vw,40px); color: var(--amber-lt); margin-bottom: 28px; text-shadow: 0 2px 20px rgba(224,122,30,.3); padding: 0 16px; }
+    .nihonichi-brush {
+      width: clamp(240px,60vw,640px); margin: 0 auto 20px;
+      filter: drop-shadow(0 4px 20px rgba(224,122,30,.4)) drop-shadow(0 0 40px rgba(224,122,30,.25));
+    }
+    .cd3-board {
+      display: flex; justify-content: center; align-items: center; gap: clamp(6px,1.4vw,20px);
+      background: rgba(224,122,30,.06); border: 1px solid rgba(224,122,30,.32); border-radius: 4px;
+      padding: clamp(20px,3vw,36px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
+      box-shadow: 0 0 60px rgba(224,122,30,.08), inset 0 1px 0 rgba(224,122,30,.15);
+      box-sizing: border-box; width: calc(100% - 32px);
+    }
+    .cd3-digit { font-family: "Courier New",monospace; font-size: clamp(36px,5.5vw,66px); font-weight: 700; line-height: 1; color: var(--amber-lt); letter-spacing: -.02em; text-shadow: 0 0 30px rgba(224,122,30,.4); }
+    .cd3-colon { font-family: "Courier New",monospace; font-size: clamp(28px,4vw,48px); color: rgba(224,122,30,.5); line-height: 1; animation: colon-blink .9s step-start infinite; }
+    .cd3-date { text-align: center; margin-top: 20px; font-size: 13px; color: var(--ink-m); letter-spacing: .08em; }
+    .cd3-until {
+      text-align: center; font-family: var(--font-serif); font-weight: 900;
+      font-size: clamp(15px,1.8vw,22px); color: var(--ink-s); letter-spacing: .18em;
+      margin-bottom: 24px;
     }
 
     /* GUINNESS 2028 countdown */
@@ -444,12 +471,12 @@
 <!-- NAV -->
 <nav id="nav">
   <div class="wrap nav-inner">
-    <a href="#" class="nav-logo">声魂 <small>GUINNESS CHALLENGE</small></a>
+    <a href="#" class="nav-logo">オキシン <small>沖縄進学支援会 × GUINNESS</small></a>
     <div class="nav-links">
       <a href="#roadmap">ロードマップ</a>
       <a href="#recruit">参加募集</a>
-      <a href="#charity">チャリティ</a>
-      <a href="#owner">オーナー</a>
+      <a href="#charity">支援活動</a>
+      <a href="#owner">代表</a>
       <a href="https://camp-fire.jp/projects/964817/view" target="_blank" rel="noopener" class="nav-cta">応援する →</a>
       <button class="theme-btn" id="themeBtn" aria-label="テーマ切替">☀ / ☾</button>
     </div>
@@ -461,14 +488,14 @@
   <div class="hero-bg" aria-hidden="true"></div>
   <img class="hero-phantom" src="assets/kodama-brush.png" alt="" aria-hidden="true">
   <div class="wrap hero-inner">
-    <div class="hero-tag">🎤 OKINAWA × GUINNESS WORLD RECORD 2028</div>
+    <div class="hero-tag">🎤 沖縄進学支援会オキシン × GUINNESS 2028</div>
     <h1 class="hero-h1 rv">
       <img class="hero-brush brush-img" src="assets/hero-brush.png" alt="沖縄から、世界へ" width="1536" height="1024">
       <span class="sr-only">沖縄から、世界へ。</span>
-      <span class="hero-h1-body">歌でつなぐ、<br>未来の子どもたちへ。</span>
-      <span class="sub">カラオケパブ声魂（コダマ）が挑むギネス世界記録への3年間</span>
+      <span class="hero-h1-body">歌でつなぐ、<br>沖縄の進学の光。</span>
+      <span class="sub">沖縄進学支援会（オキシン）が挑む、ギネス世界記録への3年間<br><small style="opacity:.7;font-size:.85em;">会場: カラオケパブ声魂（那覇市久茂地）</small></span>
     </h1>
-    <p class="hero-tagline rv rv-d2">挑戦する大人の背中が、子どもたちの勇気になる。</p>
+    <p class="hero-tagline rv rv-d2">挑戦する大人の背中が、進学に迷う子どもたちの背中を押す。</p>
     <div class="hero-stats rv rv-d2">
       <div>
         <div class="hstat-l">2026年目標</div>
@@ -508,6 +535,28 @@
   </div>
 </div>
 
+<!-- NIHON-ICHI 2027 COUNTDOWN -->
+<div id="cd3-section">
+  <div class="wrap">
+    <div class="cd3-label">🥈 NIHON-ICHI CHALLENGE 2027</div>
+    <div class="cd3-sub">
+      <img class="nihonichi-brush brush-img" src="assets/nihonichi-brush.png" alt="日本一への挑戦" width="1536" height="1024">
+      <span class="sr-only">日本一への挑戦</span>
+    </div>
+    <p class="cd3-until">まで</p>
+    <div class="cd3-board" role="timer" aria-label="日本一挑戦カウントダウン">
+      <div class="cd-unit"><div class="cd3-digit" id="cd3-d">000</div><div class="cd-unit-l">日</div></div>
+      <div class="cd3-colon" aria-hidden="true">:</div>
+      <div class="cd-unit"><div class="cd3-digit" id="cd3-h">00</div><div class="cd-unit-l">時間</div></div>
+      <div class="cd3-colon" aria-hidden="true">:</div>
+      <div class="cd-unit"><div class="cd3-digit" id="cd3-m">00</div><div class="cd-unit-l">分</div></div>
+      <div class="cd3-colon" aria-hidden="true">:</div>
+      <div class="cd-unit"><div class="cd3-digit" id="cd3-s">00</div><div class="cd-unit-l">秒</div></div>
+    </div>
+    <div class="cd3-date">2027年9月15日（水）18:00 日本一挑戦スタート ／ 声魂19周年</div>
+  </div>
+</div>
+
 <!-- GUINNESS 2028 COUNTDOWN -->
 <div id="cd2-section">
   <div class="wrap">
@@ -526,7 +575,7 @@
       <div class="cd2-colon" aria-hidden="true">:</div>
       <div class="cd-unit"><div class="cd2-digit" id="cd2-s">00</div><div class="cd-unit-l">秒</div></div>
     </div>
-    <div class="cd2-date">2028年9月21日（木）18:00 ギネス世界記録挑戦スタート ／ 声魂20周年</div>
+    <div class="cd2-date">2028年9月1日（金）18:00 ギネス世界記録挑戦スタート ／ 声魂20周年</div>
   </div>
 </div>
 
@@ -587,7 +636,7 @@
       </div>
       <div class="rv-mid"><div class="rv-vs">VS</div></div>
       <div class="rv-box">
-        <span class="rv-tag challenge">声魂の目標（2028年）</span>
+        <span class="rv-tag challenge">オキシン×声魂の目標（2028年）</span>
         <div class="rv-h">900<small style="font-size:.3em;color:var(--ink-s);">時間超</small></div>
         <div class="rv-sub">カラオケパブ声魂（コダマ）<br>那覇市久茂地・沖縄<br>2028年・声魂20周年</div>
       </div>
@@ -669,7 +718,7 @@
         </div>
         <div class="recruit-blockquote">
           <p>「2028年に世界一へ届いた時、あの最初の153時間チャレンジに、自分も参加していた。世界への土台をつくった一人だった」と、全国で胸を張って語り合える未来をつくりたい。</p>
-          <cite>— 當眞嗣剛（カラオケパブ声魂オーナー）</cite>
+          <cite>— 當眞嗣剛（沖縄進学支援会オキシン 代表 ／ カラオケパブ声魂オーナー）</cite>
         </div>
         <div class="recruit-fee">
           参加費 <span class="big">5,000円</span><br>
@@ -700,17 +749,18 @@
 <section id="charity" class="section">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="eyebrow">Charity</p>
-      <h2>歌の力を、未来の力へ。</h2>
-      <p>ひとり親家庭へのリユース制服無償寄贈</p>
+      <p class="eyebrow">Okishin — Our Mission</p>
+      <h2>進学の光を、沖縄の子どもたちへ。</h2>
+      <p>沖縄進学支援会（オキシン）の支援活動 ／ 第一歩は「制服リユース無償寄贈」</p>
       <div class="divider"></div>
     </div>
     <div class="charity-grid">
       <div class="rv">
-        <div class="charity-h">地域の子どもたちへ、<em>制服を届ける。</em></div>
+        <div class="charity-h">進学の夢を、<em>諦めさせない。</em></div>
         <div class="charity-body">
-          <p>このプロジェクトは、世界記録へ挑む姿を見せるだけで終わりません。地域のひとり親家庭や経済的に厳しい家庭など、さまざまな事情を抱えた子どもたちへ支援をつなげます。</p>
-          <p>チャリティ歌唱（1曲100円カンパ）のカンパ分は全額寄付。ひとり親家庭へのリユース制服の無償寄贈に充当します。</p>
+          <p>沖縄には、経済的な事情や家庭事情で<strong>進学の夢を諦めざるを得ない子どもたち</strong>がいます。オキシンは、そうした家庭に向けて具体的な支援を届けるために立ち上げた団体です。</p>
+          <p>ギネスへの3年間の挑戦は、この現状と活動を沖縄・全国・世界に知ってもらうための旗です。</p>
+          <p>まずは第一歩として、ひとり親家庭や経済的に厳しい家庭への<strong>リユース制服の無償寄贈</strong>から始めます。カラオケパブ声魂（那覇市久茂地）の店頭が受付窓口になります。チャリティ歌唱（1曲100円カンパ）のカンパ分は全額オキシンの支援活動費に充当します。</p>
         </div>
         <div class="c-steps">
           <div class="c-step"><div class="c-num">1</div><div class="c-step-t"><h4>対象の方が店頭でお申し込み</h4><p>児童扶養手当受給者証明等を確認</p></div></div>
@@ -766,8 +816,8 @@
 <section id="owner" class="section">
   <div class="wrap">
     <div class="sec-head rv">
-      <p class="eyebrow">Owner's Message</p>
-      <h2>オーナーメッセージ</h2>
+      <p class="eyebrow">Founder's Story</p>
+      <h2>代表・當眞嗣剛のこと</h2>
       <div class="divider"></div>
     </div>
     <div class="owner-wrap rv">
@@ -777,18 +827,22 @@
       </div>
       <div>
         <div class="owner-badge-row">
-          <span class="owner-badge">カラオケパブ声魂 オーナー</span>
+          <span class="owner-badge">沖縄進学支援会（オキシン）代表</span>
         </div>
-        <div class="owner-name">當眞 嗣剛</div>
-        <div class="owner-role">那覇市久茂地 ／ 飲食業・カラオケ歴20年以上 ／ 宜野座高校ボランティア講師</div>
+        <div class="owner-name">當眞 嗣剛<span style="font-size:.55em;font-weight:400;color:var(--ink-m);letter-spacing:.05em;margin-left:10px;">Tomatsu Guyoshi</span></div>
+        <div class="owner-role">1978年 那覇市首里生まれ ／ シングルファザー ／ カラオケパブ声魂オーナー（2008年 久茂地店開業）</div>
         <div class="owner-msg">
-          <p>カラオケは、ただ歌うだけの場所ではありません。<strong>知らない人同士が同じ歌でつながり、初対面でも肩を組み、笑顔になれる。</strong>声魂は、さまざまな人の人生が交差する温かい場所として18年続いてきました。</p>
-          <p>だからこそ、自分が20年以上携わってきた「カラオケ」という仕事で、沖縄から世界へ挑戦したいと思いました。私が見たいのは<em>記録が認定された瞬間だけではありません。200人が初対面でも歌を通してつながり、笑い合いながら同じ夢に向かう姿</em>——その姿を見た子どもたちが「大人って楽しそう」「自分も何かに挑戦してみたい」と思ってくれる未来です。</p>
+          <p>2013年、妻を病で亡くしました。約2年間の闘病の末のことでした。残されたのは、<strong>当時4歳の長男</strong>と、開業したばかりの店と、まだ40代を目前にした自分。</p>
+          <p>それから今日まで13年、<em>シングルファザーとして久茂地のカラオケパブ声魂を切り盛りしながら、息子を育ててきました。</em>プライベートで唯一自分に課してきた目標は、「1人息子を大学まで出す事」。それだけです。</p>
+          <p>2020年のコロナ禍、店の売上がゼロに近づいた年。当時小学6年生だった息子と2人で、二輪で日本一周をしました。父子で走った1万数千キロが、今も自分の背中を支えています。</p>
+          <p>久茂地カラオケパブ声魂は18年目を迎えます。数え切れないほどのお客様の人生と、この店で交わってきました。仕事に疲れた人、失恋した人、成功を祝う人、大切な人を見送った人——マイクの前で、誰もが一度は<strong>「歌に救われる瞬間」</strong>を持っています。</p>
+          <p>だからこそ、思うのです。<em>今、沖縄には進学の夢を諦めざるを得ない子どもたちが、確実にいる。</em>自分と同じような、経済的にも精神的にも余裕のない家庭がある。彼らに「大丈夫、応援する大人はここにいる」と伝えたい。</p>
+          <p><strong>沖縄進学支援会（オキシン）</strong>は、その想いから立ち上げた団体です。2028年、カラオケ連続歌唱世界記録に挑みます。目的はただ一つ。この挑戦を通じて、沖縄の進学支援の現状と、オキシンの活動を、より多くの人に知ってもらうためです。</p>
         </div>
         <div class="owner-hl">
-          <div class="ohl">18周年は沖縄一。19周年は日本一。20周年は世界一。</div>
-          <div class="ohl">世界記録は特別な人だけが挑戦できるものではありません。一歩踏み出し、仲間と力を合わせた人たちがつくるものです。</div>
-          <div class="ohl">皆さまと一緒にマイクを握れる日を、心から楽しみにしています。</div>
+          <div class="ohl">2026年、沖縄一。2027年、日本一。2028年、世界一。 ——3年間、走り続けます。</div>
+          <div class="ohl">挑戦する大人の背中が、進学に迷う子どもたちの背中を押す。</div>
+          <div class="ohl">「1人息子を大学まで出す」——その想いを、沖縄の他の家庭にも届く形に。</div>
         </div>
       </div>
     </div>
@@ -822,20 +876,20 @@
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="footer-logo">声魂 KODAMA</div>
-    <div class="footer-sub">KARAOKE PUB × GUINNESS WORLD RECORD CHALLENGE — OKINAWA</div>
+    <div class="footer-logo">沖縄進学支援会 オキシン</div>
+    <div class="footer-sub">OKINAWA SHINGAKU SHIENKAI × GUINNESS WORLD RECORD CHALLENGE 2028</div>
     <div class="footer-links">
       <a href="#roadmap">ロードマップ</a>
       <a href="#recruit">参加募集</a>
-      <a href="#charity">チャリティ</a>
+      <a href="#charity">支援活動</a>
       <a href="#campfire">Campfire</a>
-      <a href="#owner">オーナー</a>
+      <a href="#owner">代表</a>
       <a href="#access">アクセス</a>
     </div>
     <p class="partner-notice-inline">
-      このサイトはカラオケパブ声魂（コダマ）の情報発信を目的に SearchMania Inc. が制作したパートナーサイトです。
+      このサイトは沖縄進学支援会（オキシン）の情報発信を目的に SearchMania Inc. が制作したパートナーサイトです。
     </p>
-    <div class="copyright">© 2026 カラオケパブ声魂（コダマ）All Rights Reserved.</div>
+    <div class="copyright">© 2026 沖縄進学支援会（オキシン）All Rights Reserved.</div>
     <div class="produced-by">Produced by <a href="https://search-mania.net/" target="_blank" rel="noopener">SearchMania Inc.</a></div>
   </div>
 </footer>
@@ -874,8 +928,10 @@
   }
   /* 2026 countdown: 2026-09-21 18:00 JST */
   makeTicker(new Date('2026-09-21T09:00:00Z'), ['cd-d','cd-h','cd-m','cd-s'], true);
-  /* 2028 countdown: 2028-09-21 18:00 JST */
-  makeTicker(new Date('2028-09-21T09:00:00Z'), ['cd2-d','cd2-h','cd2-m','cd2-s'], true);
+  /* 2027 countdown: 2027-09-15 18:00 JST — 日本一 */
+  makeTicker(new Date('2027-09-15T09:00:00Z'), ['cd3-d','cd3-h','cd3-m','cd3-s'], true);
+  /* 2028 countdown: 2028-09-01 18:00 JST — ギネス */
+  makeTicker(new Date('2028-09-01T09:00:00Z'), ['cd2-d','cd2-h','cd2-m','cd2-s'], true);
 
   var els = document.querySelectorAll('.rv');
   if ('IntersectionObserver' in window) {
