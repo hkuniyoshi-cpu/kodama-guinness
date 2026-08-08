@@ -24,6 +24,11 @@
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
+  <!-- Google Fonts: 筆文字 Yuji Mai + 力強い明朝 Shippori Mincho B1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@700;800;900&family=Yuji+Mai&display=swap" rel="stylesheet">
+
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {
@@ -75,8 +80,9 @@
       --ink-s:   #b0bed4;
       --ink-m:   #6478a0;
       --line:    rgba(201,168,76,.15);
-      --font-serif: "YuMincho","Yu Mincho","游明朝","Hiragino Mincho Pro","ヒラギノ明朝 Pro W3",Georgia,serif;
+      --font-serif: "Shippori Mincho B1","YuMincho","Yu Mincho","游明朝","Hiragino Mincho Pro","ヒラギノ明朝 Pro W3",Georgia,serif;
       --font-sans:  "Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","Meiryo","メイリオ",system-ui,sans-serif;
+      --font-brush: "Yuji Mai","Shippori Mincho B1","YuMincho","游明朝",serif;
     }
     @media (prefers-color-scheme: light) {
       :root {
@@ -147,7 +153,7 @@
     }
     .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--red-lt); animation: blink 1.4s ease-in-out infinite; flex-shrink: 0; }
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
-    .hero-h1 { font-size: clamp(36px,7vw,88px); font-weight: 900; line-height: 1.08; letter-spacing: -.01em; margin-bottom: 16px; }
+    .hero-h1 { font-size: clamp(32px,6vw,76px); font-weight: 900; line-height: 1.25; letter-spacing: -.005em; margin-bottom: 16px; padding: 0 8px; }
     .hero-h1 .hl { color: var(--gold-lt); display: block; }
     .hero-h1 .sub { font-size: clamp(14px,2vw,22px); color: var(--ink-s); font-weight: 400; display: block; margin-top: 10px; letter-spacing: .02em; font-family: var(--font-sans); }
     .hero-tagline { font-size: 15px; color: var(--ink-m); margin-bottom: 52px; line-height: 1.9; }
@@ -160,20 +166,40 @@
     .btn-red:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(196,18,48,.5); }
     .btn-outline { display: inline-block; border: 1.5px solid var(--gold); color: var(--gold-lt); padding: 15px 40px; border-radius: 3px; font-size: 16px; font-weight: 700; letter-spacing: .05em; transition: background .2s, color .2s; }
     .btn-outline:hover { background: var(--gold); color: var(--bg); }
-    /* calligraphic treatment */
-    h2, .hero-h1 .hl, .rm-year, .rv-h, .cf-goal, .recruit-lead, .charity-h, .owner-name, .ev-title {
-      font-style: italic;
-      text-shadow: 1px 2px 8px rgba(0,0,0,.35);
+    /* 筆文字（力強い和文カリグラフィ）— ヒーロー・年号・大見出しのみに限定適用 */
+    .hero-h1 .hl,
+    .rm-year,
+    .rv-h,
+    .cf-goal,
+    .ev-title,
+    .owner-name,
+    .cd2-sub,
+    .rv-vs {
+      font-family: var(--font-brush);
+      font-weight: 400;      /* Yuji Mai は400のみ */
+      letter-spacing: .04em; /* 筆文字は詰めない */
+      line-height: 1.35;     /* 筆の抜きぶんを確保 */
+      text-shadow: 0 2px 12px rgba(0,0,0,.25);
     }
-    .eyebrow { font-style: italic; letter-spacing: .24em; }
-    .sec-head h2 { letter-spacing: -.015em; }
+    /* 節見出し h2 は Shippori Mincho B1 900 で力強く */
+    h2, .charity-h, .recruit-lead {
+      font-family: var(--font-serif);
+      font-weight: 900;
+      letter-spacing: .01em;
+      line-height: 1.35;
+    }
+    .sec-head h2 { letter-spacing: -.005em; }
     .divider { width: 56px; height: 3px; background: linear-gradient(90deg, transparent, var(--gold-lt) 30%, var(--gold-dk) 70%, transparent); border-radius: 2px; margin-top: 22px; }
-    .ohl { font-style: italic; }
+    /* はみ出し防止 */
+    .hero-h1, .hero-h1 .hl, .rv-h, .rm-year, .cf-goal, .cd2-sub, .ev-title, .owner-name {
+      word-break: keep-all;
+      overflow-wrap: break-word;
+    }
 
     /* GUINNESS 2028 countdown */
     #cd2-section { background: linear-gradient(135deg, rgba(196,18,48,.12) 0%, var(--bg) 60%); border-top: 1px solid rgba(196,18,48,.2); border-bottom: 1px solid rgba(196,18,48,.2); padding: 52px 0; }
-    .cd2-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--red-lt); font-weight: 700; margin-bottom: 8px; font-family: var(--font-sans); font-style: italic; }
-    .cd2-sub { text-align: center; font-family: var(--font-serif); font-style: italic; font-size: clamp(22px,3vw,36px); font-weight: 900; color: var(--gold-lt); margin-bottom: 28px; text-shadow: 0 2px 16px rgba(201,168,76,.2); }
+    .cd2-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--red-lt); font-weight: 700; margin-bottom: 8px; font-family: var(--font-sans); }
+    .cd2-sub { text-align: center; font-size: clamp(24px,3.4vw,40px); color: var(--gold-lt); margin-bottom: 28px; text-shadow: 0 2px 20px rgba(201,168,76,.3); padding: 0 16px; }
     .cd2-board {
       display: flex; justify-content: center; align-items: flex-start; gap: clamp(8px,2vw,32px);
       background: rgba(196,18,48,.07); border: 1px solid rgba(196,18,48,.35); border-radius: 4px;
@@ -247,7 +273,7 @@
     .recruit-lead em { color: var(--red-lt); font-style: normal; }
     .recruit-body p { font-size: 15px; color: var(--ink-s); line-height: 1.95; margin-bottom: 14px; }
     .recruit-blockquote { margin: 28px 0; padding: 24px 28px; border-left: 3px solid var(--red); background: rgba(196,18,48,.05); border-radius: 0 4px 4px 0; }
-    .recruit-blockquote p { font-family: var(--font-serif); font-size: clamp(14px,1.8vw,17px); color: var(--gold-lt); line-height: 1.8; margin: 0; font-style: italic; }
+    .recruit-blockquote p { font-family: var(--font-serif); font-weight: 700; font-size: clamp(14px,1.8vw,17px); color: var(--gold-lt); line-height: 1.9; margin: 0; }
     .recruit-blockquote cite { display: block; font-size: 12px; color: var(--ink-m); margin-top: 10px; font-style: normal; letter-spacing: .07em; }
     .recruit-tags { display: flex; flex-wrap: wrap; gap: 10px; }
     .rtag { border: 1px solid var(--line); padding: 8px 16px; border-radius: 2px; font-size: 13px; color: var(--ink-s); transition: border-color .2s, color .2s; }
