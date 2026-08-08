@@ -201,29 +201,31 @@
     .cd2-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--red-lt); font-weight: 700; margin-bottom: 8px; font-family: var(--font-sans); }
     .cd2-sub { text-align: center; font-size: clamp(24px,3.4vw,40px); color: var(--gold-lt); margin-bottom: 28px; text-shadow: 0 2px 20px rgba(201,168,76,.3); padding: 0 16px; }
     .cd2-board {
-      display: flex; justify-content: center; align-items: flex-start; gap: clamp(8px,2vw,32px);
+      display: flex; justify-content: center; align-items: center; gap: clamp(6px,1.4vw,20px);
       background: rgba(196,18,48,.07); border: 1px solid rgba(196,18,48,.35); border-radius: 4px;
-      padding: clamp(16px,3vw,32px) clamp(20px,4vw,48px); max-width: 680px; margin: 0 auto;
+      padding: clamp(20px,3vw,36px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
       box-shadow: 0 0 60px rgba(196,18,48,.08), inset 0 1px 0 rgba(196,18,48,.15);
+      box-sizing: border-box; width: calc(100% - 32px);
     }
-    .cd2-digit { font-family: "Courier New",monospace; font-size: clamp(52px,9vw,100px); font-weight: 700; line-height: 1; color: var(--red-lt); letter-spacing: -.03em; min-width: 2ch; text-shadow: 0 0 30px rgba(196,18,48,.4); }
-    .cd2-colon { font-family: "Courier New",monospace; font-size: clamp(40px,7vw,80px); color: rgba(196,18,48,.5); line-height: 1; margin-top: 2px; animation: colon-blink .9s step-start infinite; }
+    .cd2-digit { font-family: "Courier New",monospace; font-size: clamp(36px,5.5vw,66px); font-weight: 700; line-height: 1; color: var(--red-lt); letter-spacing: -.02em; text-shadow: 0 0 30px rgba(196,18,48,.4); }
+    .cd2-colon { font-family: "Courier New",monospace; font-size: clamp(28px,4vw,48px); color: rgba(196,18,48,.5); line-height: 1; animation: colon-blink .9s step-start infinite; }
     .cd2-date { text-align: center; margin-top: 20px; font-size: 13px; color: var(--ink-m); letter-spacing: .08em; }
 
     /* COUNTDOWN */
     #cd-section { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 52px 0; }
     .cd-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--gold); font-weight: 700; margin-bottom: 24px; font-family: var(--font-sans); }
     .cd-board {
-      display: flex; justify-content: center; align-items: flex-start; gap: clamp(8px,2vw,32px);
+      display: flex; justify-content: center; align-items: center; gap: clamp(6px,1.4vw,20px);
       background: #02040e; border: 1px solid rgba(201,168,76,.2); border-radius: 4px;
-      padding: clamp(16px,3vw,32px) clamp(20px,4vw,48px); max-width: 680px; margin: 0 auto;
+      padding: clamp(20px,3vw,36px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
       box-shadow: 0 0 60px rgba(201,168,76,.06), inset 0 1px 0 rgba(201,168,76,.1);
+      box-sizing: border-box; width: calc(100% - 32px);
     }
     :root[data-theme="light"] .cd-board { background: #0a0e1a; }
     .cd-unit { text-align: center; }
-    .cd-digit { font-family: "Courier New",monospace; font-size: clamp(52px,9vw,100px); font-weight: 700; line-height: 1; color: var(--gold-lt); letter-spacing: -.03em; min-width: 2ch; text-shadow: 0 0 30px rgba(201,168,76,.3); }
-    .cd-unit-l { font-size: 10px; letter-spacing: .2em; color: var(--ink-m); margin-top: 8px; font-family: var(--font-sans); }
-    .cd-colon { font-family: "Courier New",monospace; font-size: clamp(40px,7vw,80px); color: var(--gold-dk); line-height: 1; margin-top: 2px; animation: colon-blink .9s step-start infinite; }
+    .cd-digit { font-family: "Courier New",monospace; font-size: clamp(36px,5.5vw,66px); font-weight: 700; line-height: 1; color: var(--gold-lt); letter-spacing: -.02em; text-shadow: 0 0 30px rgba(201,168,76,.3); }
+    .cd-unit-l { font-size: 10px; letter-spacing: .2em; color: var(--ink-m); margin-top: 10px; font-family: var(--font-sans); }
+    .cd-colon { font-family: "Courier New",monospace; font-size: clamp(28px,4vw,48px); color: var(--gold-dk); line-height: 1; animation: colon-blink .9s step-start infinite; }
     @keyframes colon-blink { 0%,49%{opacity:1} 50%,100%{opacity:.2} }
     .cd-date { text-align: center; margin-top: 20px; font-size: 13px; color: var(--ink-m); letter-spacing: .08em; }
 
