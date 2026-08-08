@@ -190,11 +190,34 @@
     .hstat-l { font-size: 11px; letter-spacing: .18em; color: var(--gold); font-weight: 700; margin-bottom: 6px; font-family: var(--font-sans); }
     .hstat-n { font-family: var(--font-serif); font-size: clamp(38px,6vw,68px); font-weight: 900; color: var(--gold-lt); line-height: 1; }
     .hstat-u { font-size: 14px; color: var(--ink-s); font-family: var(--font-sans); font-weight: 400; }
-    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn-red { display: inline-block; background: var(--red); color: #fff; padding: 17px 40px; border-radius: 3px; font-size: 16px; font-weight: 900; letter-spacing: .05em; box-shadow: 0 6px 28px rgba(196,18,48,.4); transition: transform .2s, box-shadow .2s; }
-    .btn-red:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(196,18,48,.5); }
-    .btn-outline { display: inline-block; border: 1.5px solid var(--gold); color: var(--gold-lt); padding: 15px 40px; border-radius: 3px; font-size: 16px; font-weight: 700; letter-spacing: .05em; transition: background .2s, color .2s; }
-    .btn-outline:hover { background: var(--gold); color: var(--bg); }
+    .hero-btns { display: flex; gap: 18px; justify-content: center; flex-wrap: wrap; }
+    /* 押印/箔押し風ボタン — 角丸・薄影・グラデを排除 */
+    .btn-red {
+      display: inline-block; position: relative;
+      background: var(--red); color: #fff;
+      padding: 20px 44px 22px;
+      font-family: var(--font-serif); font-size: 17px; font-weight: 900;
+      letter-spacing: .12em;
+      border-radius: 0;
+      clip-path: polygon(0 8%, 8% 0, 100% 0, 100% 92%, 92% 100%, 0 100%);
+      box-shadow: 6px 6px 0 rgba(0,0,0,.35);
+      transition: transform .18s ease, box-shadow .18s ease;
+    }
+    .btn-red:hover { transform: translate(2px,2px); box-shadow: 3px 3px 0 rgba(0,0,0,.35); }
+    .btn-red:active { transform: translate(6px,6px); box-shadow: 0 0 0 rgba(0,0,0,.35); }
+    .btn-outline {
+      display: inline-block; position: relative;
+      background: transparent; color: var(--gold-lt);
+      padding: 18px 42px 20px;
+      font-family: var(--font-serif); font-size: 17px; font-weight: 900;
+      letter-spacing: .12em;
+      border: 2px solid var(--gold);
+      border-radius: 0;
+      box-shadow: 6px 6px 0 rgba(201,168,76,.28);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s;
+    }
+    .btn-outline:hover { transform: translate(2px,2px); box-shadow: 3px 3px 0 rgba(201,168,76,.28); background: rgba(201,168,76,.08); }
+    .btn-outline:active { transform: translate(6px,6px); box-shadow: 0 0 0 rgba(201,168,76,.28); }
     /* 筆文字（力強い和文カリグラフィ）— ヒーロー・年号・大見出しのみに限定適用 */
     .hero-h1 .hl,
     .rm-year,
@@ -223,6 +246,18 @@
     .hero-h1, .hero-h1 .hl, .rv-h, .rm-year, .cf-goal, .cd2-sub, .ev-title, .owner-name {
       word-break: keep-all;
       overflow-wrap: break-word;
+    }
+
+    /* 沖縄一 2026 header brush + until label */
+    .cd-sub { text-align: center; font-size: clamp(24px,3.4vw,40px); color: var(--gold-lt); margin-bottom: 20px; padding: 0 16px; }
+    .h153-brush {
+      width: clamp(240px,60vw,640px); margin: 0 auto 16px;
+      filter: drop-shadow(0 4px 20px rgba(201,168,76,.4)) drop-shadow(0 0 40px rgba(201,168,76,.22));
+    }
+    .cd-until {
+      text-align: center; font-family: var(--font-serif); font-weight: 900;
+      font-size: clamp(15px,1.8vw,22px); color: var(--ink-s); letter-spacing: .18em;
+      margin-bottom: 24px;
     }
 
     /* 日本一 2027 countdown (amber) */
@@ -464,9 +499,88 @@
       *, .rv { transition: none !important; animation: none !important; }
       .rv { opacity: 1; transform: none; }
     }
+
+    /* ============================================
+       3D BACKGROUND + HERO PARALLAX
+       ============================================ */
+    #fx-bg {
+      position: fixed; inset: 0;
+      width: 100vw; height: 100vh;
+      z-index: 0;
+      pointer-events: none;
+      opacity: .95;
+    }
+    /* Body 3D perspective for scroll parallax layers */
+    body { perspective: 1400px; perspective-origin: 50% 30%; }
+    /* Every content section lifts above the canvas */
+    nav, section, #cd-section, #cd2-section, #cd3-section, footer, #page-loader {
+      position: relative; z-index: 2;
+    }
+    /* Hero 3D layered depth */
+    #hero { transform-style: preserve-3d; overflow: hidden; }
+    .hero-phantom {
+      transform: translateZ(-180px) scale(1.15);
+      transition: transform .3s ease-out;
+      will-change: transform;
+    }
+    .hero-brush {
+      transform: translateZ(60px);
+      transition: transform .3s ease-out;
+      will-change: transform;
+    }
+    /* Scroll-linked rotation applied via JS: --scroll: 0..1 */
+    .hero-phantom {
+      --scroll: 0;
+      transform:
+        translate3d(0, calc(var(--scroll) * 80px), -180px)
+        rotate3d(1, 0.3, 0, calc(var(--scroll) * 22deg))
+        scale(1.15);
+    }
+    .hero-brush {
+      --scroll: 0;
+      transform:
+        translate3d(0, calc(var(--scroll) * -30px), 60px)
+        rotateX(calc(var(--scroll) * -6deg));
+    }
+    /* Scroll-linked hero fade */
+    .hero-h1-body, .hero-tagline, .hero-stats, .hero-btns, .hero-tag {
+      transition: opacity .3s ease-out;
+    }
+
+    /* ============================================
+       力強い枠 (letterpress corner-cut cards)
+       ============================================ */
+    /* カウントダウン各ボード: 角切り＋二重線＋落款スタンプ */
+    .cd-board, .cd2-board, .cd3-board {
+      border-radius: 0 !important;
+      clip-path: polygon(0 6%, 6% 0, 100% 0, 100% 94%, 94% 100%, 0 100%);
+      position: relative;
+    }
+    .cd-board::before, .cd2-board::before, .cd3-board::before {
+      content: ''; position: absolute; inset: 6px;
+      border: 1px solid currentColor; opacity: .18;
+      clip-path: polygon(0 5%, 5% 0, 100% 0, 100% 95%, 95% 100%, 0 100%);
+      pointer-events: none;
+    }
+    .cd-board { color: var(--gold); }
+    .cd2-board { color: var(--red); }
+    .cd3-board { color: var(--amber); }
+
+    /* Roadmap year cards — 額装風 */
+    .rm-card {
+      border-radius: 0 !important;
+      clip-path: polygon(0 12px, 12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+    }
+    /* Event / Charity cards — 額装風 */
+    .ev-card, .c-card, .cf-inner, .owner-wrap, .review-card {
+      border-radius: 0 !important;
+    }
   </style>
 </head>
 <body>
+
+<!-- 3D BACKGROUND CANVAS -->
+<canvas id="fx-bg" aria-hidden="true"></canvas>
 
 <!-- NAV -->
 <nav id="nav">
@@ -521,7 +635,12 @@
 <!-- COUNTDOWN -->
 <div id="cd-section">
   <div class="wrap">
-    <div class="cd-label">⏱&ensp;2026年・153時間チャレンジ スタートまで</div>
+    <div class="cd-label">🥇 OKINAWA-ICHI CHALLENGE 2026</div>
+    <div class="cd-sub">
+      <img class="h153-brush brush-img" src="assets/153h-brush.png" alt="153時間チャレンジ" width="1536" height="1024">
+      <span class="sr-only">153時間チャレンジ</span>
+    </div>
+    <p class="cd-until">スタートまで</p>
     <div class="cd-board" role="timer" aria-live="polite" aria-label="カウントダウン">
       <div class="cd-unit"><div class="cd-digit" id="cd-d">000</div><div class="cd-unit-l">日</div></div>
       <div class="cd-colon" aria-hidden="true">:</div>
@@ -944,6 +1063,156 @@
   } else {
     els.forEach(function(el){ el.classList.add('in'); });
   }
+})();
+
+/* ================================================
+   3D BG + SCROLL-LINKED PARALLAX (Canvas 2D)
+   金粒子（声魂 = 声の魂）＋ 墨リプル + スクロール速度連動
+   ================================================ */
+(function(){
+  var canvas = document.getElementById('fx-bg');
+  if (!canvas) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var ctx = canvas.getContext('2d', { alpha: true });
+  var DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var W = 0, H = 0;
+
+  function resize(){
+    W = canvas.width  = Math.floor(innerWidth  * DPR);
+    H = canvas.height = Math.floor(innerHeight * DPR);
+    canvas.style.width  = innerWidth  + 'px';
+    canvas.style.height = innerHeight + 'px';
+  }
+  resize();
+  addEventListener('resize', resize, { passive: true });
+
+  var isDark = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() !== '#f8f3e8';
+  function reCheckTheme(){ isDark = getComputedStyle(document.documentElement).getPropertyValue('--bg').trim() !== '#f8f3e8'; }
+  addEventListener('storage', reCheckTheme);
+
+  var PARTICLE_COUNT = Math.max(50, Math.min(140, Math.floor((innerWidth * innerHeight) / 14000)));
+  var particles = [];
+  function makeParticle(){
+    return {
+      x: Math.random() * W,
+      y: Math.random() * H,
+      z: 0.3 + Math.random() * 1.5,
+      vx: (Math.random() - 0.5) * 0.1,
+      vy: -0.15 - Math.random() * 0.45,
+      r: 0.4 + Math.random() * 2.2,
+      life: Math.random(),
+      hue: Math.random() < 0.15 ? 'r' : 'g',
+      twinkle: Math.random() * Math.PI * 2
+    };
+  }
+  for (var i = 0; i < PARTICLE_COUNT; i++){
+    var p = makeParticle();
+    p.y = Math.random() * H;
+    particles.push(p);
+  }
+
+  var ripples = [];
+  function spawnRipple(){
+    ripples.push({
+      x: (0.2 + Math.random() * 0.6) * W,
+      y: (0.15 + Math.random() * 0.7) * H,
+      r: 8 * DPR,
+      max: (100 + Math.random() * 220) * DPR,
+      life: 1
+    });
+  }
+  var rippleTimer = 0;
+
+  var scrollY = window.scrollY;
+  var scrollV = 0;
+  var lastY = scrollY;
+  addEventListener('scroll', function(){
+    var y = window.scrollY;
+    scrollV = (y - lastY) * 0.5 + scrollV * 0.6;
+    lastY = y;
+    scrollY = y;
+
+    /* Hero parallax via CSS var (0..1) */
+    var hero = document.getElementById('hero');
+    if (hero){
+      var h = hero.offsetHeight;
+      var t = Math.max(0, Math.min(1, y / (h * 0.9)));
+      hero.style.setProperty('--scroll', t.toFixed(3));
+      var ph = hero.querySelector('.hero-phantom');
+      var hb = hero.querySelector('.hero-brush');
+      if (ph) ph.style.setProperty('--scroll', t.toFixed(3));
+      if (hb) hb.style.setProperty('--scroll', t.toFixed(3));
+    }
+  }, { passive: true });
+
+  var _time = 0;
+  function frame(){
+    _time += 1;
+    /* fade the previous frame — creates ink-trail effect */
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.fillStyle = isDark ? 'rgba(5,11,30,0.20)' : 'rgba(248,243,232,0.30)';
+    ctx.fillRect(0, 0, W, H);
+
+    /* scroll velocity decay */
+    scrollV *= 0.94;
+
+    /* ripples */
+    rippleTimer++;
+    if (rippleTimer > 90 + Math.random() * 120) { spawnRipple(); rippleTimer = 0; }
+    ctx.globalCompositeOperation = isDark ? 'screen' : 'multiply';
+    for (var r = ripples.length - 1; r >= 0; r--){
+      var rp = ripples[r];
+      rp.r += 1.4 * DPR;
+      rp.life -= 0.008;
+      if (rp.life <= 0 || rp.r > rp.max){ ripples.splice(r, 1); continue; }
+      var alpha = rp.life * 0.35;
+      ctx.strokeStyle = isDark
+        ? 'rgba(240,204,110,' + alpha + ')'
+        : 'rgba(122,98,37,' + alpha + ')';
+      ctx.lineWidth = (1 + rp.life * 2) * DPR;
+      ctx.beginPath();
+      ctx.arc(rp.x, rp.y, rp.r, 0, Math.PI * 2);
+      ctx.stroke();
+    }
+
+    /* particles */
+    ctx.globalCompositeOperation = isDark ? 'screen' : 'multiply';
+    var sv = Math.min(4, Math.abs(scrollV) * 0.05);
+    for (var i = 0; i < particles.length; i++){
+      var pp = particles[i];
+      pp.x += pp.vx * pp.z + Math.sin((_time + i * 30) * 0.008) * 0.2;
+      pp.y += (pp.vy - sv * 0.5) * pp.z;
+      pp.twinkle += 0.04;
+      pp.life -= 0.002;
+      if (pp.y < -20 || pp.life <= 0){
+        particles[i] = makeParticle();
+        particles[i].y = H + 10;
+        continue;
+      }
+      if (pp.x < -10) pp.x = W + 10;
+      if (pp.x > W + 10) pp.x = -10;
+      var tw = 0.5 + 0.5 * Math.sin(pp.twinkle);
+      var alpha2 = 0.35 * tw * pp.life;
+      var color = pp.hue === 'r'
+        ? (isDark ? 'rgba(232,23,58,' : 'rgba(196,18,48,')
+        : (isDark ? 'rgba(240,204,110,' : 'rgba(122,98,37,');
+      ctx.fillStyle = color + alpha2 + ')';
+      ctx.beginPath();
+      ctx.arc(pp.x, pp.y, pp.r * pp.z * DPR, 0, Math.PI * 2);
+      ctx.fill();
+      /* halo */
+      if (pp.z > 1.2){
+        ctx.fillStyle = color + (alpha2 * 0.15) + ')';
+        ctx.beginPath();
+        ctx.arc(pp.x, pp.y, pp.r * pp.z * DPR * 4, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
 })();
 </script>
 </body>
