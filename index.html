@@ -6,20 +6,20 @@
   <title>沖縄進学支援会オキシン | 歌でつなぐ、進学の光 ／ ギネスに挑む3年間</title>
   <meta name="description" content="沖縄進学支援会（オキシン）が2028年カラオケ連続歌唱世界記録に挑戦。2026年沖縄一・2027年日本一・2028年世界一の3年計画で、沖縄の進学に悩む家庭への支援活動を広げていきます。会場はカラオケパブ声魂（那覇久茂地）。">
   <meta name="keywords" content="沖縄進学支援会,オキシン,進学支援,シングルファザー,声魂,ギネス,世界記録,カラオケ,沖縄,那覇,久茂地,當眞嗣剛">
-  <link rel="canonical" href="https://kodama-guinness.search-mania.net/">
+  <link rel="canonical" href="https://okishin.search-mania.net/">
 
   <!-- OGP -->
   <meta property="og:title" content="沖縄進学支援会オキシン | 歌でつなぐ、進学の光">
   <meta property="og:description" content="沖縄進学支援会（オキシン）が2028年カラオケ世界記録に挑戦。2026年沖縄一→2027年日本一→2028年世界一の3年計画で、沖縄の進学支援を広く社会へ発信します。">
-  <meta property="og:url" content="https://kodama-guinness.search-mania.net/">
+  <meta property="og:url" content="https://okishin.search-mania.net/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://kodama-guinness.search-mania.net/ogp.png">
+  <meta property="og:image" content="https://okishin.search-mania.net/ogp.png">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="沖縄進学支援会オキシン">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="沖縄進学支援会オキシン | 歌でつなぐ、進学の光">
   <meta name="twitter:description" content="2028年、900時間超のカラオケ世界記録に挑戦。沖縄の進学支援を広めるための3年間。2026年9月21日スタート。">
-  <meta name="twitter:image" content="https://kodama-guinness.search-mania.net/ogp.png">
+  <meta name="twitter:image" content="https://okishin.search-mania.net/ogp.png">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -56,7 +56,7 @@
     "organizer": {
       "@type": "Organization",
       "name": "沖縄進学支援会（オキシン）",
-      "url": "https://kodama-guinness.search-mania.net/"
+      "url": "https://okishin.search-mania.net/"
     },
     "offers": {
       "@type": "Offer",
@@ -434,15 +434,41 @@
 
     /* OWNER */
     #owner { background: var(--bg); }
-    .owner-wrap { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: start; border: 1px solid var(--line); border-radius: 4px; padding: clamp(32px,4vw,56px); }
-    .owner-ph { background: var(--bg2); border: 1px solid var(--line); border-radius: 3px; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+    .owner-wrap { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; padding: 0; border: none; border-radius: 0; max-width: 1000px; margin: 0 auto; }
+    .owner-ph-sticky { position: sticky; top: 96px; }
+    .owner-ph { background: var(--bg2); border: 1px solid var(--line); aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
     .owner-ph .mic { font-size: 64px; filter: drop-shadow(0 0 20px rgba(201,168,76,.35)); }
     .owner-ph small { font-size: 11px; color: var(--ink-m); }
     .owner-badge-row { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
     .owner-badge { background: var(--red); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 2px; letter-spacing: .05em; font-family: var(--font-sans); }
     .owner-name { font-family: var(--font-serif); font-size: clamp(28px,3.5vw,44px); font-weight: 900; margin-bottom: 4px; }
     .owner-role { font-size: 12px; color: var(--ink-m); letter-spacing: .08em; margin-bottom: 24px; }
-    .owner-msg p { font-size: 15px; color: var(--ink-s); line-height: 2; margin-bottom: 14px; }
+    .owner-msg p { font-size: 15px; color: var(--ink-s); line-height: 2.05; margin-bottom: 16px; }
+    .owner-msg .story-h {
+      font-family: var(--font-serif);
+      font-size: clamp(20px,2.4vw,28px);
+      font-weight: 900;
+      color: var(--gold-lt);
+      line-height: 1.5;
+      margin: 44px 0 20px;
+      padding-left: 18px;
+      border-left: 3px solid var(--gold);
+      letter-spacing: .02em;
+    }
+    .owner-msg .story-h:first-child { margin-top: 0; }
+    .owner-msg .story-vow {
+      font-family: var(--font-serif);
+      font-size: clamp(19px,2.2vw,26px);
+      font-weight: 900;
+      color: var(--gold-lt);
+      line-height: 1.7;
+      margin: 24px 0 20px;
+      padding: 22px 26px;
+      background: rgba(201,168,76,.08);
+      border-left: 4px solid var(--gold);
+      text-align: left;
+    }
+    .owner-msg blockquote.story-vow { border-left: 4px solid var(--red); color: #fff; background: rgba(196,18,48,.12); }
     .owner-msg strong { color: var(--gold-lt); }
     .owner-msg em { color: var(--red-lt); font-style: normal; }
     .owner-hl { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
@@ -887,24 +913,34 @@
     </div>
     <div class="charity-grid">
       <div class="rv">
-        <div class="charity-h">進学の夢を、<em>諦めさせない。</em></div>
+        <div class="charity-h">「捨てる」のではなく、<em>「次の誰かに託す」</em></div>
         <div class="charity-body">
-          <p>沖縄には、経済的な事情や家庭事情で<strong>進学の夢を諦めざるを得ない子どもたち</strong>がいます。オキシンは、そうした家庭に向けて具体的な支援を届けるために立ち上げた団体です。</p>
-          <p>ギネスへの3年間の挑戦は、この現状と活動を沖縄・全国・世界に知ってもらうための旗です。</p>
-          <p>まずは第一歩として、ひとり親家庭や経済的に厳しい家庭への<strong>リユース制服の無償寄贈</strong>から始めます。カラオケパブ声魂（那覇市久茂地）の店頭が受付窓口になります。チャリティ歌唱（1曲100円カンパ）のカンパ分は全額オキシンの支援活動費に充当します。</p>
+          <p>沖縄には、家庭の事情だけで<strong>進学の夢や、やりたいことを諦めざるを得ない子どもたち</strong>がいます。オキシンは、そうした家庭に「大丈夫、応援する大人はここにいる」と伝えるために立ち上げた団体です。</p>
+          <p>今年度の第一歩は、ひとり親家庭や経済的に厳しい家庭への<strong>制服リユース無償寄贈</strong>。與那城寿恵子さんが取り組んでこられた<strong>「学生服リユースリサイクル ゆいまーる」</strong>の温かい仕組みから学び、必要としている子どもたちと家庭へ、地域みんなの想いをつないでいきます。</p>
+          <p>まだ使える制服がある。<br>一方で、その制服を必要としている家庭がある。<br>その間をつなぐ人がいる。</p>
+          <p>制服という「物」だけではなく、<em>「次の子にも頑張ってほしい」という人の想い</em>まで、一緒につながっていく。それがオキシンの支援の原点です。</p>
+          <p>来年度以降は、<strong>ランドセル寄贈</strong>など、支援の輪を段階的に広げていく予定です。</p>
         </div>
         <div class="c-steps">
           <div class="c-step"><div class="c-num">1</div><div class="c-step-t"><h4>対象の方が店頭でお申し込み</h4><p>児童扶養手当受給者証明等を確認</p></div></div>
           <div class="c-step"><div class="c-num">2</div><div class="c-step-t"><h4>リユース制服を無償でお渡し</h4><p>クリーニング・メンテナンス済みの状態で届ける</p></div></div>
           <div class="c-step"><div class="c-num">3</div><div class="c-step-t"><h4>在庫がない場合は入荷予約</h4><p>入荷後に連絡のうえお渡し。継続的に実施。</p></div></div>
         </div>
+        <div style="margin-top:32px;padding:22px 26px;background:rgba(201,168,76,.06);border-left:3px solid var(--gold);">
+          <p style="font-size:13px;color:var(--gold);letter-spacing:.12em;font-weight:700;margin-bottom:8px;font-family:var(--font-sans);">支援の広がり — Roadmap</p>
+          <p style="font-size:15px;color:var(--ink);line-height:1.9;margin:0;">
+            <strong>今年度</strong>：制服リユース寄贈からスタート<br>
+            <strong>来年度以降</strong>：ランドセル寄贈などへ支援を拡大<br>
+            <strong>将来的に</strong>：進学に必要な学用品・受験費用支援へ
+          </p>
+        </div>
       </div>
       <div class="c-card rv rv-d2">
-        <h3>この挑戦が残すもの</h3>
-        <div class="c-item"><div class="c-item-icon">🏆</div><div><h4>記録はいつか更新される</h4><p>それは挑戦が受け継がれていく証。次の挑戦者へのバトンになる。</p></div></div>
-        <div class="c-item"><div class="c-item-icon">❤️</div><div><h4>子どもの心に生まれた勇気は残る</h4><p>挑戦する大人の姿を見て芽生えた「やってみよう」。それがこのプロジェクトの一番大きな価値。</p></div></div>
-        <div class="c-item"><div class="c-item-icon">🌊</div><div><h4>挑戦の連鎖が生まれる</h4><p>大人が挑戦する→子どもが夢を持つ→成長して次の世代を応援する。その循環を沖縄から。</p></div></div>
-        <div class="c-item"><div class="c-item-icon">🌺</div><div><h4>毎年9月に沖縄が動く</h4><p>「今年も面白い挑戦が始まる」と言われる、挑戦する文化の土台をつくる。</p></div></div>
+        <h3>「まだ使えるものを、必要としている人につなぐ」</h3>
+        <div class="c-item"><div class="c-item-icon">🎓</div><div><h4>ひとり親家庭の負担を、少しでも軽く</h4><p>制服を新品でそろえる費用は、決して小さくない。特にひとり親家庭にとって、そのありがたさは実際に利用した人ほど分かる。</p></div></div>
+        <div class="c-item"><div class="c-item-icon">🤝</div><div><h4>物だけでなく、想いを託す</h4><p>「次の子にも頑張ってほしい」——大切に着てきた制服に、そんな人の想いが乗って、次の家庭の新しい学校生活を応援する。</p></div></div>
+        <div class="c-item"><div class="c-item-icon">🏆</div><div><h4>ギネスへの挑戦は、活動を広げる旗</h4><p>3年間の挑戦で沖縄・全国・世界にオキシンの活動を伝え、支援の輪を大きくしていく。</p></div></div>
+        <div class="c-item"><div class="c-item-icon">🌺</div><div><h4>親の事情だけで、夢を諦めさせない</h4><p>大きなことはできなくても、自分たちにできることはある。その一歩を、沖縄から積み重ねていく。</p></div></div>
       </div>
     </div>
   </div>
@@ -952,9 +988,11 @@
       <div class="divider"></div>
     </div>
     <div class="owner-wrap rv">
-      <div class="owner-ph">
-        <div class="mic">🎤</div>
-        <small>写真掲載予定</small>
+      <div class="owner-ph-sticky">
+        <div class="owner-ph">
+          <div class="mic">🎤</div>
+          <small>写真掲載予定</small>
+        </div>
       </div>
       <div>
         <div class="owner-badge-row">
@@ -963,17 +1001,53 @@
         <div class="owner-name">當眞 嗣剛<span style="font-size:.55em;font-weight:400;color:var(--ink-m);letter-spacing:.05em;margin-left:10px;">Tomatsu Guyoshi</span></div>
         <div class="owner-role">1978年 那覇市首里生まれ ／ シングルファザー ／ カラオケパブ声魂オーナー（2008年 久茂地店開業）</div>
         <div class="owner-msg">
-          <p>2013年、妻を病で亡くしました。約2年間の闘病の末のことでした。残されたのは、<strong>当時4歳の長男</strong>と、開業したばかりの店と、まだ40代を目前にした自分。</p>
-          <p>それから今日まで13年、<em>シングルファザーとして久茂地のカラオケパブ声魂を切り盛りしながら、息子を育ててきました。</em>プライベートで唯一自分に課してきた目標は、「1人息子を大学まで出す事」。それだけです。</p>
-          <p>2020年のコロナ禍、店の売上がゼロに近づいた年。当時小学6年生だった息子と2人で、二輪で日本一周をしました。父子で走った1万数千キロが、今も自分の背中を支えています。</p>
-          <p>久茂地カラオケパブ声魂は18年目を迎えます。数え切れないほどのお客様の人生と、この店で交わってきました。仕事に疲れた人、失恋した人、成功を祝う人、大切な人を見送った人——マイクの前で、誰もが一度は<strong>「歌に救われる瞬間」</strong>を持っています。</p>
-          <p>だからこそ、思うのです。<em>今、沖縄には進学の夢を諦めざるを得ない子どもたちが、確実にいる。</em>自分と同じような、経済的にも精神的にも余裕のない家庭がある。彼らに「大丈夫、応援する大人はここにいる」と伝えたい。</p>
-          <p><strong>沖縄進学支援会（オキシン）</strong>は、その想いから立ち上げた団体です。2028年、カラオケ連続歌唱世界記録に挑みます。目的はただ一つ。この挑戦を通じて、沖縄の進学支援の現状と、オキシンの活動を、より多くの人に知ってもらうためです。</p>
+
+          <h3 class="story-h">妻との別れ</h3>
+          <p>2013年。</p>
+          <p>約2年間の闘病の末、妻が<strong>悪性リンパ腫</strong>で亡くなりました。</p>
+          <p>残されたのは、<em>まだ5歳の息子</em>と、開業したばかりの店。</p>
+          <p>でも、悲しみに浸っている余裕はありませんでした。</p>
+          <p>生活していかなければならない。<br>店を守らなければならない。<br>そして何より、息子を育てなければならない。</p>
+          <p>どんなに辛くても、その気持ちは押し殺して、店に立てば笑顔でお客様を迎えました。お客様を楽しませることが、自分の仕事だったからです。</p>
+
+          <h3 class="story-h">一つの誓い</h3>
+          <p>そして、一つだけ自分の中で決めたことがあります。</p>
+          <blockquote class="story-vow">「この子を大学まで出して、社会に送り出す。」</blockquote>
+          <p>きっとそれが、亡くなった嫁が一番願っていることだと思ったからです。</p>
+          <p>だから、父親としても、店主としても、<strong>止まるという選択肢はありませんでした。</strong></p>
+
+          <h3 class="story-h">シングルファザーとして、子どもと向き合ってきて</h3>
+          <p>子育ては、楽しいことばかりではありません。<br>お金のこと、学校のこと、将来のこと。</p>
+          <p>親として「なんとかしてあげたい」と思っても、<em>一人ではどうにもならないこと</em>だってあります。</p>
+          <p>僕もこれまで、親としていろんなことを考えながら、子どもと向き合ってきました。だからこそ、ずっと思っていることがあります。</p>
+          <p><strong>親の置かれている環境や家庭の事情だけで、子どもがやりたいことや、進みたい道を諦めることがあってほしくない。</strong></p>
+          <p>大きなことはできなくても、自分たちにできることはあるんじゃないか。そんな想いが、少しずつ強くなっていきました。</p>
+
+          <h3 class="story-h">僕自身も、リユースに助けられた一人です</h3>
+          <p>今回「制服支援をやりたい」と思ったのには、もう一つ理由があります。</p>
+          <p>僕自身も、與那城寿恵子さんが取り組んでいる<strong>「学生服リユースリサイクル ゆいまーる」</strong>から、リユース品を購入したことがあります。</p>
+          <p>子どもは本当に成長が早いです。制服を新品で一式そろえるとなると、決して安い金額ではありません。しかも成長期なので、サイズが合わなくなれば買い替えも必要になりますし、洗い替えなどを考えると数着必要になることもあります。</p>
+          <p><em>特にひとり親家庭にとって、その負担は決して小さなものではない</em>と思います。</p>
+
+          <h3 class="story-h">「捨てる」のではなく、「次の誰かに託す」</h3>
+          <p>でも、僕が「ゆいまーる」の取り組みを素晴らしいと思ったのは、金銭的な負担を減らせることだけではありません。</p>
+          <p>まだ使える制服がある。<br>一方で、その制服を必要としている家庭がある。<br>その間をつないでくれる人がいる。</p>
+          <p class="story-vow">「まだ使えるものを、必要としている人につなぐ」</p>
+          <p>この仕組みそのものが、すごく温かいものだと感じました。</p>
+          <p>新品じゃなくてもいい。<em>誰かが大切に着てきた制服が、次の子どもの新しい学校生活を応援してくれる。</em></p>
+          <p>そして何より、<strong>「捨てる」のではなく、「次の誰かに託す」</strong>。そこには、制服という「物」だけではなく、「次の子にも頑張ってほしい」という人の想いまで、一緒につながっていく。</p>
+
+          <h3 class="story-h">声魂のVisionから、オキシンへ</h3>
+          <p>声魂では、これまでもVisionの中に<strong>「地域・社会貢献」</strong>を掲げてきました。高齢者支援やひとり親支援など、地域への恩返しを続けていくこと。お客様だけではなく、地域や社会にも喜んでもらえる存在になること。</p>
+          <p>今回の世界記録への挑戦を通して、<em>「言葉だけじゃなくて、ちゃんと行動にしていこう。」</em>そう考えるようになりました。</p>
+          <p>その一歩として立ち上げようとしているのが、<strong>「沖縄進学支援会（オキシン）」</strong>です。</p>
+          <p>突然、新しいことを始めるというよりも、これまで声魂として大切にしてきたことと、僕自身が親として感じてきたこと。その二つを、<em>ようやく形にしていく。</em>僕の中では、そんな感覚に近いです。</p>
+
         </div>
         <div class="owner-hl">
-          <div class="ohl">2026年、沖縄一。2027年、日本一。2028年、世界一。 ——3年間、走り続けます。</div>
-          <div class="ohl">挑戦する大人の背中が、進学に迷う子どもたちの背中を押す。</div>
-          <div class="ohl">「1人息子を大学まで出す」——その想いを、沖縄の他の家庭にも届く形に。</div>
+          <div class="ohl">「この子を大学まで出して、社会に送り出す。」——亡き妻への誓いから、沖縄の子どもたちへ。</div>
+          <div class="ohl">親の事情だけで、子どもが夢を諦めることがあってほしくない。</div>
+          <div class="ohl">大きなことはできなくても、自分たちにできることはある。まずは制服リユース寄贈から。</div>
         </div>
       </div>
     </div>
