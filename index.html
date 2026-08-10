@@ -260,73 +260,73 @@
     }
 
     /* 沖縄一 2026 header brush + until label */
-    .cd-sub { text-align: center; font-size: clamp(24px,3.4vw,40px); color: var(--gold-lt); margin-bottom: 20px; padding: 0 16px; }
+    .cd-sub { text-align: center; font-size: clamp(20px,3vw,32px); color: var(--gold-lt); margin: 0 auto 4px; padding: 0 16px; line-height: 1; }
     .h153-brush {
-      width: clamp(240px,60vw,640px); margin: 0 auto 16px;
-      filter: drop-shadow(0 4px 20px rgba(201,168,76,.4)) drop-shadow(0 0 40px rgba(201,168,76,.22));
+      width: clamp(180px,42vw,420px); margin: 0 auto 4px; display: block;
+      filter: drop-shadow(0 3px 12px rgba(201,168,76,.3));
     }
     .cd-until {
       text-align: center; font-family: var(--font-serif); font-weight: 900;
-      font-size: clamp(15px,1.8vw,22px); color: var(--ink-s); letter-spacing: .18em;
-      margin-bottom: 24px;
+      font-size: clamp(13px,1.5vw,18px); color: var(--ink-s); letter-spacing: .16em;
+      margin: 0 0 12px;
     }
 
     /* 日本一 2027 countdown (amber) */
-    #cd3-section { background: linear-gradient(135deg, rgba(224,122,30,.10) 0%, var(--bg) 60%); border-top: 1px solid rgba(224,122,30,.22); border-bottom: 1px solid rgba(224,122,30,.22); padding: 52px 0; }
-    .cd3-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--amber-lt); font-weight: 700; margin-bottom: 8px; font-family: var(--font-sans); }
-    .cd3-sub { text-align: center; font-size: clamp(24px,3.4vw,40px); color: var(--amber-lt); margin-bottom: 28px; text-shadow: 0 2px 20px rgba(224,122,30,.3); padding: 0 16px; }
+    #cd3-section { background: linear-gradient(135deg, rgba(224,122,30,.10) 0%, var(--bg) 60%); border-top: 3px solid var(--amber); border-bottom: 3px solid var(--amber); padding: 28px 0 32px; }
+    .cd3-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--amber-lt); font-weight: 700; margin: 0 0 4px; font-family: var(--font-sans); }
+    .cd3-sub { text-align: center; font-size: clamp(20px,3vw,32px); color: var(--amber-lt); margin: 0 auto 4px; padding: 0 16px; line-height: 1; text-shadow: 0 2px 20px rgba(224,122,30,.25); }
     .nihonichi-brush {
-      width: clamp(240px,60vw,640px); margin: 0 auto 20px;
-      filter: drop-shadow(0 4px 20px rgba(224,122,30,.4)) drop-shadow(0 0 40px rgba(224,122,30,.25));
+      width: clamp(180px,42vw,420px); margin: 0 auto 4px; display: block;
+      filter: drop-shadow(0 3px 12px rgba(224,122,30,.3));
     }
     .cd3-board {
       display: flex; justify-content: center; align-items: center; gap: clamp(6px,1.4vw,20px);
-      background: rgba(224,122,30,.06); border: 1px solid rgba(224,122,30,.32); border-radius: 4px;
-      padding: clamp(20px,3vw,36px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
-      box-shadow: 0 0 60px rgba(224,122,30,.08), inset 0 1px 0 rgba(224,122,30,.15);
+      background: rgba(224,122,30,.06); border: 2px solid rgba(224,122,30,.4); border-radius: 18px;
+      padding: clamp(18px,2.6vw,30px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
+      box-shadow: 0 6px 24px rgba(224,122,30,.14), inset 0 1px 0 rgba(224,122,30,.15);
       box-sizing: border-box; width: calc(100% - 32px);
     }
     .cd3-digit { font-family: "Courier New",monospace; font-size: clamp(36px,5.5vw,66px); font-weight: 700; line-height: 1; color: var(--amber-lt); letter-spacing: -.02em; text-shadow: 0 0 30px rgba(224,122,30,.4); }
     .cd3-colon { font-family: "Courier New",monospace; font-size: clamp(28px,4vw,48px); color: rgba(224,122,30,.5); line-height: 1; animation: colon-blink .9s step-start infinite; }
-    .cd3-date { text-align: center; margin-top: 20px; font-size: 13px; color: var(--ink-m); letter-spacing: .08em; }
+    .cd3-date { text-align: center; margin: 12px 0 0; font-size: 12px; color: var(--ink-m); letter-spacing: .08em; }
     .cd3-until {
       text-align: center; font-family: var(--font-serif); font-weight: 900;
-      font-size: clamp(15px,1.8vw,22px); color: var(--ink-s); letter-spacing: .18em;
-      margin-bottom: 24px;
+      font-size: clamp(13px,1.5vw,18px); color: var(--ink-s); letter-spacing: .16em;
+      margin: 0 0 12px;
     }
 
-    /* GUINNESS 2028 countdown */
-    #cd2-section { background: linear-gradient(135deg, rgba(196,18,48,.12) 0%, var(--bg) 60%); border-top: 1px solid rgba(196,18,48,.2); border-bottom: 1px solid rgba(196,18,48,.2); padding: 52px 0; }
+    /* GUINNESS 2028 countdown (red) */
+    #cd2-section { background: linear-gradient(135deg, rgba(196,18,48,.12) 0%, var(--bg) 60%); border-top: 3px solid var(--red); border-bottom: 3px solid var(--red); padding: 28px 0 32px; }
     .cd2-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--red-lt); font-weight: 700; margin-bottom: 8px; font-family: var(--font-sans); }
     .cd2-sub { text-align: center; font-size: clamp(24px,3.4vw,40px); color: var(--gold-lt); margin-bottom: 28px; text-shadow: 0 2px 20px rgba(201,168,76,.3); padding: 0 16px; }
     .cd2-board {
       display: flex; justify-content: center; align-items: center; gap: clamp(6px,1.4vw,20px);
-      background: rgba(196,18,48,.07); border: 1px solid rgba(196,18,48,.35); border-radius: 4px;
-      padding: clamp(20px,3vw,36px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
-      box-shadow: 0 0 60px rgba(196,18,48,.08), inset 0 1px 0 rgba(196,18,48,.15);
+      background: rgba(196,18,48,.07); border: 2px solid rgba(196,18,48,.42); border-radius: 18px;
+      padding: clamp(18px,2.6vw,30px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
+      box-shadow: 0 6px 24px rgba(196,18,48,.14), inset 0 1px 0 rgba(196,18,48,.15);
       box-sizing: border-box; width: calc(100% - 32px);
     }
     .cd2-digit { font-family: "Courier New",monospace; font-size: clamp(36px,5.5vw,66px); font-weight: 700; line-height: 1; color: var(--red-lt); letter-spacing: -.02em; text-shadow: 0 0 30px rgba(196,18,48,.4); }
     .cd2-colon { font-family: "Courier New",monospace; font-size: clamp(28px,4vw,48px); color: rgba(196,18,48,.5); line-height: 1; animation: colon-blink .9s step-start infinite; }
     .cd2-date { text-align: center; margin-top: 20px; font-size: 13px; color: var(--ink-m); letter-spacing: .08em; }
 
-    /* COUNTDOWN */
-    #cd-section { background: var(--bg2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 52px 0; }
-    .cd-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--gold); font-weight: 700; margin-bottom: 24px; font-family: var(--font-sans); }
+    /* COUNTDOWN 2026 (gold) */
+    #cd-section { background: linear-gradient(135deg, rgba(201,168,76,.10) 0%, var(--bg) 60%); border-top: 3px solid var(--gold); border-bottom: 3px solid var(--gold); padding: 28px 0 32px; }
+    .cd-label { text-align: center; font-size: 11px; letter-spacing: .28em; color: var(--gold); font-weight: 700; margin: 0 0 4px; font-family: var(--font-sans); }
     .cd-board {
       display: flex; justify-content: center; align-items: center; gap: clamp(6px,1.4vw,20px);
-      background: #02040e; border: 1px solid rgba(201,168,76,.2); border-radius: 4px;
-      padding: clamp(20px,3vw,36px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
-      box-shadow: 0 0 60px rgba(201,168,76,.06), inset 0 1px 0 rgba(201,168,76,.1);
+      background: #02040e; border: 2px solid rgba(201,168,76,.42); border-radius: 18px;
+      padding: clamp(18px,2.6vw,30px) clamp(16px,2.5vw,32px); max-width: 780px; margin: 0 auto;
+      box-shadow: 0 6px 24px rgba(201,168,76,.14), inset 0 1px 0 rgba(201,168,76,.1);
       box-sizing: border-box; width: calc(100% - 32px);
     }
     :root[data-theme="light"] .cd-board { background: #0a0e1a; }
     .cd-unit { text-align: center; }
     .cd-digit { font-family: "Courier New",monospace; font-size: clamp(36px,5.5vw,66px); font-weight: 700; line-height: 1; color: var(--gold-lt); letter-spacing: -.02em; text-shadow: 0 0 30px rgba(201,168,76,.3); }
-    .cd-unit-l { font-size: 10px; letter-spacing: .2em; color: var(--ink-m); margin-top: 10px; font-family: var(--font-sans); }
+    .cd-unit-l { font-size: 10px; letter-spacing: .2em; color: var(--ink-m); margin-top: 8px; font-family: var(--font-sans); }
     .cd-colon { font-family: "Courier New",monospace; font-size: clamp(28px,4vw,48px); color: var(--gold-dk); line-height: 1; animation: colon-blink .9s step-start infinite; }
     @keyframes colon-blink { 0%,49%{opacity:1} 50%,100%{opacity:.2} }
-    .cd-date { text-align: center; margin-top: 20px; font-size: 13px; color: var(--ink-m); letter-spacing: .08em; }
+    .cd-date { text-align: center; margin: 12px 0 0; font-size: 12px; color: var(--ink-m); letter-spacing: .08em; }
 
     /* ROADMAP */
     #roadmap { background: var(--bg); }
@@ -588,25 +588,27 @@
     .rv-d4 { transition-delay: .48s; }
     /* Hero: ビューポート中央に「沖縄から、世界へ」筆文字を配置 */
     #hero {
-      min-height: calc(100vh - 68px);
-      padding: 0 !important;
+      min-height: 100vh;
+      padding: 88px 0 20px !important; /* nav 高さ分の余白 */
       overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
     }
     .hero-inner {
-      padding: 20px 0 !important;
+      padding: 0 !important;
       width: 100%;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
     }
     /* ヒーロー内部の各要素間の詰め */
-    .hero-tag { margin-bottom: 20px !important; }
-    .hero-h1 { margin-bottom: 12px !important; }
-    .hero-tagline { margin-bottom: 24px !important; }
-    .hero-stats { margin-bottom: 24px !important; }
+    .hero-tag { margin-bottom: 18px !important; }
+    .hero-h1 { margin-bottom: 10px !important; }
+    .hero-tagline { margin-bottom: 20px !important; }
+    .hero-stats { margin-bottom: 20px !important; }
     .hero-phantom { opacity: .08; }
+    /* NAV: 常時半透明背景でヘッダー可読性を担保 */
+    #nav { background: color-mix(in srgb, var(--bg) 75%, transparent); backdrop-filter: blur(10px); }
     /* Simplify the countdown clip-path (was too busy) */
     .cd-board, .cd2-board, .cd3-board { clip-path: none !important; border-radius: 0 !important; }
     .cd-board::before, .cd2-board::before, .cd3-board::before { display: none; }
