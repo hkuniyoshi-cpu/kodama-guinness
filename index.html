@@ -137,7 +137,8 @@
     .nav-links { display: flex; gap: 28px; align-items: center; font-size: 13px; }
     .nav-links a { color: var(--ink-s); transition: color .2s; }
     .nav-links a:hover { color: var(--gold-lt); }
-    .nav-cta { background: var(--red); color: #fff !important; padding: 7px 18px; border-radius: 3px; font-weight: 700; letter-spacing: .05em; transition: background .2s !important; }
+    .nav-cta { background: var(--red); color: #fff !important; padding: 9px 22px; border-radius: 999px; font-weight: 700; letter-spacing: .06em; font-size: 13px; box-shadow: 0 4px 14px rgba(196,18,48,.28); transition: transform .2s, box-shadow .2s !important; }
+    .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(196,18,48,.4); }
     .nav-cta:hover { background: var(--red-lt) !important; }
     .theme-btn { background: none; border: 1px solid var(--line); border-radius: 3px; color: var(--ink-m); font-size: 13px; padding: 5px 10px; cursor: pointer; font-family: var(--font-sans); }
     .theme-btn:hover { border-color: var(--gold); color: var(--gold); }
@@ -377,7 +378,8 @@
     .recruit-blockquote p { font-family: var(--font-serif); font-weight: 700; font-size: clamp(14px,1.8vw,17px); color: var(--gold-lt); line-height: 1.9; margin: 0; }
     .recruit-blockquote cite { display: block; font-size: 12px; color: var(--ink-m); margin-top: 10px; font-style: normal; letter-spacing: .07em; }
     .recruit-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-    .rtag { border: 1px solid var(--line); padding: 8px 16px; border-radius: 2px; font-size: 13px; color: var(--ink-s); transition: border-color .2s, color .2s; }
+    .rtag { border: 1px solid var(--line); padding: 9px 18px; border-radius: 999px; font-size: 13px; color: var(--ink-s); background: rgba(201,168,76,.04); transition: transform .2s, border-color .2s, color .2s, background .2s; }
+    .rtag:hover { border-color: var(--gold); color: var(--gold-lt); background: rgba(201,168,76,.1); transform: translateY(-1px); }
     .rtag:hover { border-color: var(--gold); color: var(--gold-lt); }
     .recruit-fee { margin-top: 28px; padding: 20px; background: var(--bg2); border: 1px solid var(--line); border-radius: 4px; font-size: 14px; }
     .recruit-fee .big { font-family: var(--font-serif); font-size: 32px; font-weight: 900; color: var(--gold-lt); }
@@ -395,10 +397,11 @@
     .ev-date { color: var(--red); font-size: clamp(12px,1.5vw,15px); font-weight: 700; letter-spacing: .12em; margin-bottom: 12px; font-family: var(--font-sans); }
     .ev-title { font-family: var(--font-serif); font-size: clamp(26px,4.2vw,52px); font-weight: 900; line-height: 1.25; margin-bottom: 12px; color: var(--ink); }
     .ev-title span { color: var(--red); }
-    .ev-stats { display: flex; gap: clamp(20px,4vw,56px); justify-content: center; flex-wrap: wrap; margin-top: 24px; }
-    .ev-s { text-align: center; }
-    .ev-s .n { font-family: var(--font-serif); font-size: clamp(30px,4.5vw,48px); font-weight: 900; color: var(--red); line-height: 1; }
-    .ev-s .l { font-size: 11px; color: var(--ink-s); margin-top: 6px; letter-spacing: .14em; font-family: var(--font-sans); font-weight: 700; }
+    .ev-stats { display: flex; gap: clamp(16px,3vw,44px); justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+    .ev-s { text-align: center; padding: 0 8px; }
+    .ev-s .n { font-family: var(--font-serif); font-size: clamp(28px,4.2vw,44px); font-weight: 900; color: var(--red); line-height: 1.15; }
+    .ev-s .n .u { font-size: .55em; margin-left: 2px; font-weight: 700; letter-spacing: .02em; color: var(--red); opacity: .85; }
+    .ev-s .l { font-size: 12px; color: var(--ink-s); margin-top: 4px; letter-spacing: .12em; font-family: var(--font-sans); font-weight: 700; }
     .ev-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 14px; }
     .ev-card { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; box-shadow: 0 2px 10px rgba(0,0,0,.03); }
     .ev-card h3 { font-size: 11px; letter-spacing: .18em; color: var(--red); font-weight: 700; margin-bottom: 8px; font-family: var(--font-sans); }
@@ -427,15 +430,21 @@
 
     /* CAMPFIRE */
     #campfire { background: var(--bg2); text-align: center; }
-    .cf-inner { max-width: 640px; margin: 0 auto; }
+    .cf-inner {
+      max-width: 900px; margin: 0 auto;
+      padding: clamp(40px,6vw,72px) clamp(24px,4vw,56px);
+      background: var(--bg);
+      border: 1px solid var(--line);
+    }
     .cf-goal-label { font-size: 12px; letter-spacing: .2em; color: var(--gold); font-weight: 700; font-family: var(--font-sans); }
-    .cf-goal { font-family: var(--font-serif); font-size: clamp(72px,12vw,140px); font-weight: 900; color: var(--gold-lt); line-height: 1; margin: 20px 0 8px; }
-    .cf-desc { font-size: 15px; color: var(--ink-s); line-height: 1.9; margin: 20px 0 36px; }
+    .cf-goal { font-family: var(--font-serif); font-size: clamp(56px,9vw,104px); font-weight: 900; color: var(--gold-lt); line-height: 1; margin: 14px 0 4px; }
+    .cf-desc { font-size: 15px; color: var(--ink-s); line-height: 1.9; margin: 16px auto 28px; max-width: 560px; }
     .uses { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; text-align: left; margin-bottom: 36px; }
     .use { background: rgba(255,255,255,.03); border: 1px solid var(--line); padding: 12px 14px; border-radius: 3px; font-size: 13px; color: var(--ink-s); line-height: 1.6; display: flex; gap: 8px; }
     .use strong { color: var(--ink); }
-    .cf-btn { display: inline-flex; align-items: center; gap: 8px; background: #e8541a; color: #fff; padding: 18px 48px; border-radius: 3px; font-size: 17px; font-weight: 900; letter-spacing: .04em; box-shadow: 0 6px 32px rgba(232,84,26,.4); transition: transform .2s, box-shadow .2s; }
-    .cf-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(232,84,26,.5); }
+    .cf-btn { display: inline-flex; align-items: center; gap: 10px; background: #e8541a; color: #fff; padding: 18px 44px; border-radius: 999px; font-family: var(--font-sans); font-size: 16px; font-weight: 700; letter-spacing: .06em; box-shadow: 0 6px 22px rgba(232,84,26,.35), inset 0 -3px 0 rgba(0,0,0,.14); transition: transform .2s, box-shadow .2s; }
+    .cf-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232,84,26,.5), inset 0 -3px 0 rgba(0,0,0,.14); }
+    .cf-btn:active { transform: translateY(0); box-shadow: 0 3px 12px rgba(232,84,26,.32), inset 0 -1px 0 rgba(0,0,0,.14); }
     .cf-note { font-size: 12px; color: var(--ink-m); margin-top: 16px; line-height: 1.8; }
 
     /* OWNER */
@@ -849,10 +858,10 @@
       <div class="ev-date">2026.09.21 Mon 18:00 → 09.28 Sun 3:00</div>
       <div class="ev-title"><span>153時間</span> 連続カラオケチャレンジ</div>
       <div class="ev-stats">
-        <div class="ev-s"><div class="n">153</div><div class="l">時間連続</div></div>
-        <div class="ev-s"><div class="n">200</div><div class="l">名参加目標</div></div>
-        <div class="ev-s"><div class="n">7</div><div class="l">日間ノンストップ</div></div>
-        <div class="ev-s"><div class="n">5,000</div><div class="l">円 参加費</div></div>
+        <div class="ev-s"><div class="n">153<span class="u">時間</span></div><div class="l">連続歌唱</div></div>
+        <div class="ev-s"><div class="n">200<span class="u">名</span></div><div class="l">参加目標</div></div>
+        <div class="ev-s"><div class="n">7<span class="u">日間</span></div><div class="l">ノンストップ</div></div>
+        <div class="ev-s"><div class="n">5,000<span class="u">円</span></div><div class="l">参加費</div></div>
       </div>
     </div>
     <div class="ev-grid rv">
