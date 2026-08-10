@@ -127,9 +127,12 @@
     #nav.scrolled { background: color-mix(in srgb,var(--bg) 92%,transparent); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
     .nav-inner { display: flex; align-items: center; justify-content: space-between; }
     .nav-logo { display: inline-flex; align-items: center; }
-    .nav-logo-img { height: 54px; width: auto; display: block; }
+    .nav-logo-txt { display: inline-flex; flex-direction: column; line-height: 1.1; }
+    .nav-logo-abbr { font-family: var(--font-serif); font-size: 20px; font-weight: 900; color: var(--ink); letter-spacing: .06em; }
+    .nav-logo-full { font-family: var(--font-sans); font-size: 10px; letter-spacing: .18em; color: var(--ink-m); font-weight: 400; margin-top: 4px; }
     @media (max-width: 540px) {
-      .nav-logo-img { height: 42px; }
+      .nav-logo-abbr { font-size: 17px; }
+      .nav-logo-full { font-size: 9px; letter-spacing: .14em; }
     }
     .nav-links { display: flex; gap: 28px; align-items: center; font-size: 13px; }
     .nav-links a { color: var(--ink-s); transition: color .2s; }
@@ -443,27 +446,27 @@
     .owner-badge { background: var(--red); color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 2px; letter-spacing: .05em; font-family: var(--font-sans); }
     .owner-name { font-family: var(--font-serif); font-size: clamp(28px,3.5vw,44px); font-weight: 900; margin-bottom: 4px; }
     .owner-role { font-size: 12px; color: var(--ink-m); letter-spacing: .08em; margin-bottom: 24px; }
-    .owner-msg p { font-size: 15px; color: var(--ink-s); line-height: 2.05; margin-bottom: 16px; }
+    .owner-msg p { font-size: 15px; color: var(--ink-s); line-height: 1.9; margin-bottom: 10px; }
     .owner-msg .story-h {
       font-family: var(--font-serif);
-      font-size: clamp(20px,2.4vw,28px);
+      font-size: clamp(19px,2.2vw,26px);
       font-weight: 900;
       color: var(--gold-lt);
-      line-height: 1.5;
-      margin: 44px 0 20px;
-      padding-left: 18px;
+      line-height: 1.4;
+      margin: 28px 0 14px;
+      padding-left: 14px;
       border-left: 3px solid var(--gold);
       letter-spacing: .02em;
     }
     .owner-msg .story-h:first-child { margin-top: 0; }
     .owner-msg .story-vow {
       font-family: var(--font-serif);
-      font-size: clamp(19px,2.2vw,26px);
+      font-size: clamp(17px,2vw,22px);
       font-weight: 900;
       color: var(--gold-lt);
-      line-height: 1.7;
-      margin: 24px 0 20px;
-      padding: 22px 26px;
+      line-height: 1.6;
+      margin: 16px 0 14px;
+      padding: 16px 20px;
       background: rgba(201,168,76,.08);
       border-left: 4px solid var(--gold);
       text-align: left;
@@ -485,9 +488,10 @@
     /* FOOTER */
     footer { background: #02040e; border-top: 1px solid var(--line); padding: 48px 0 24px; text-align: center; }
     :root[data-theme="light"] footer { background: var(--bg2); }
-    .footer-logo-block { display: block; margin-bottom: 20px; }
-    .footer-logo-img { height: 96px; width: auto; }
-    .footer-sub { font-size: 12px; letter-spacing: .18em; color: var(--ink-m); margin-bottom: 28px; }
+    .footer-logo-block { display: block; margin-bottom: 12px; }
+    .footer-logo { font-family: var(--font-serif); font-size: 26px; font-weight: 900; color: var(--gold-lt); letter-spacing: .06em; line-height: 1.1; }
+    .footer-org { font-family: var(--font-sans); font-size: 12px; letter-spacing: .14em; color: var(--ink-m); margin-top: 6px; }
+    .footer-sub { font-size: 11px; letter-spacing: .18em; color: var(--ink-m); margin: 16px 0 28px; }
     .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; }
     .footer-links a { font-size: 12px; color: var(--ink-m); transition: color .2s; }
     .footer-links a:hover { color: var(--gold-lt); }
@@ -546,10 +550,10 @@
     #campfire { background: var(--bg); }
     #owner { background: var(--bg2); }
     #access { background: var(--bg); }
-    /* Bigger breathing room per section (kaonavi 流) */
-    section.section { padding: clamp(96px,12vw,180px) 0; }
-    /* Massive editorial section heading */
-    .sec-head { text-align: center; margin-bottom: clamp(48px,7vw,96px); }
+    /* Section padding — kaonavi流だがコンパクト化 */
+    section.section { padding: clamp(56px,7vw,96px) 0; }
+    /* Editorial section heading */
+    .sec-head { text-align: center; margin-bottom: clamp(28px,4vw,56px); }
     .sec-head .eyebrow {
       display: inline-block;
       font-size: 12px; letter-spacing: .38em;
@@ -579,9 +583,10 @@
     .rv-d2 { transition-delay: .24s; }
     .rv-d3 { transition-delay: .36s; }
     .rv-d4 { transition-delay: .48s; }
-    /* Hero: shrink 3D and let brush image do the talking */
-    #hero { min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
-    .hero-phantom { opacity: .12; }
+    /* Hero: shrink whitespace, let brush image do the talking */
+    #hero { min-height: auto; padding-top: clamp(48px,6vw,72px); padding-bottom: clamp(48px,6vw,72px); overflow: hidden; }
+    .hero-inner { padding: 40px 0 30px !important; }
+    .hero-phantom { opacity: .10; }
     /* Simplify the countdown clip-path (was too busy) */
     .cd-board, .cd2-board, .cd3-board { clip-path: none !important; border-radius: 0 !important; }
     .cd-board::before, .cd2-board::before, .cd3-board::before { display: none; }
@@ -622,7 +627,10 @@
 <nav id="nav">
   <div class="wrap nav-inner">
     <a href="#" class="nav-logo" aria-label="オキシン 沖縄進学支援会 トップへ">
-      <img src="assets/okishin-logo.png" alt="オキシン 沖縄進学支援会" class="nav-logo-img">
+      <span class="nav-logo-txt">
+        <span class="nav-logo-abbr">オキシン</span>
+        <span class="nav-logo-full">沖縄進学支援会</span>
+      </span>
     </a>
     <div class="nav-links">
       <a href="#roadmap">ロードマップ</a>
@@ -1094,7 +1102,8 @@
 <footer>
   <div class="wrap">
     <div class="footer-logo-block">
-      <img src="assets/okishin-logo.png" alt="オキシン 沖縄進学支援会" class="footer-logo-img">
+      <div class="footer-logo">オキシン</div>
+      <div class="footer-org">沖縄進学支援会 / Okinawa Shingaku Shienkai</div>
     </div>
     <div class="footer-sub">GUINNESS WORLD RECORD CHALLENGE 2028 — 歌でつなぐ、進学の光</div>
     <div class="footer-links">
