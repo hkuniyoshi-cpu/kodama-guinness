@@ -374,9 +374,9 @@
     .recruit-lead { font-family: var(--font-serif); font-size: clamp(20px,2.5vw,30px); font-weight: 900; line-height: 1.5; margin-bottom: 20px; color: var(--gold-lt); }
     .recruit-lead em { color: var(--red-lt); font-style: normal; }
     .recruit-body p { font-size: 15px; color: var(--ink-s); line-height: 1.95; margin-bottom: 14px; }
-    .recruit-blockquote { margin: 28px 0; padding: 24px 28px; border-left: 3px solid var(--red); background: rgba(196,18,48,.05); border-radius: 0 4px 4px 0; }
-    .recruit-blockquote p { font-family: var(--font-serif); font-weight: 700; font-size: clamp(14px,1.8vw,17px); color: var(--gold-lt); line-height: 1.9; margin: 0; }
-    .recruit-blockquote cite { display: block; font-size: 12px; color: var(--ink-m); margin-top: 10px; font-style: normal; letter-spacing: .07em; }
+    .recruit-blockquote { margin: 28px 0; padding: 26px 30px 24px; border-left: 4px solid var(--red); background: var(--bg2); border-radius: 14px; box-shadow: 0 4px 16px rgba(0,0,0,.04); }
+    .recruit-blockquote p { font-family: var(--font-serif); font-weight: 700; font-size: clamp(15px,1.9vw,19px); color: var(--ink); line-height: 1.95; margin: 0; word-break: keep-all; overflow-wrap: normal; text-wrap: pretty; }
+    .recruit-blockquote cite { display: block; font-size: 12px; color: var(--ink-s); margin-top: 14px; font-style: normal; letter-spacing: .06em; }
     .recruit-tags { display: flex; flex-wrap: wrap; gap: 10px; }
     .rtag { border: 1px solid var(--line); padding: 9px 18px; border-radius: 999px; font-size: 13px; color: var(--ink-s); background: rgba(201,168,76,.04); transition: transform .2s, border-color .2s, color .2s, background .2s; }
     .rtag:hover { border-color: var(--gold); color: var(--gold-lt); background: rgba(201,168,76,.1); transform: translateY(-1px); }
@@ -554,8 +554,78 @@
        ============================================ */
     /* Section alternating backgrounds */
     #hero { background: var(--bg); }
+    #story { background: var(--bg2); position: relative; }
     #cd-section, #cd3-section, #cd2-section { }
     #roadmap { background: var(--bg); }
+
+    /* ============================================
+       STORY / JOURNEY セクション
+       ============================================ */
+    .story-flow {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+      gap: 20px;
+      align-items: stretch;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .story-step {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 22px 24px;
+      text-align: center;
+      display: flex; flex-direction: column;
+      position: relative;
+      transition: transform .3s ease, box-shadow .3s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,.04);
+    }
+    .story-step:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(201,168,76,.14); }
+    .story-num {
+      font-family: var(--font-serif);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: .18em;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .story-icon { font-size: 40px; margin-bottom: 10px; line-height: 1; }
+    .story-step h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(18px,2vw,22px);
+      font-weight: 900;
+      color: var(--ink);
+      margin: 0 0 10px;
+      line-height: 1.3;
+      word-break: keep-all;
+    }
+    .story-lead {
+      font-family: var(--font-serif);
+      font-size: clamp(13px,1.5vw,15px);
+      font-weight: 700;
+      color: var(--red);
+      margin: 0 0 12px !important;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+    .story-step p:not(.story-lead) {
+      font-size: 13px;
+      color: var(--ink-s);
+      line-height: 1.9;
+      margin: 0;
+      text-align: left;
+    }
+    .story-arrow {
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; color: var(--gold-dk); font-weight: 700;
+      user-select: none;
+    }
+    .story-cta { text-align: center; margin-top: 40px; }
+
+    @media (max-width: 900px) {
+      .story-flow { grid-template-columns: 1fr; gap: 16px; }
+      .story-arrow { transform: rotate(90deg); padding: 4px 0; }
+    }
     #recruit { background: var(--bg2); }
     #event { background: var(--bg); }
     #charity { background: var(--bg2); }
@@ -661,6 +731,7 @@
       </span>
     </a>
     <div class="nav-links">
+      <a href="#story">流れ</a>
       <a href="#roadmap">ロードマップ</a>
       <a href="#recruit">参加募集</a>
       <a href="#charity">支援活動</a>
@@ -704,6 +775,53 @@
     </div>
   </div>
 
+</section>
+
+<!-- STORY / JOURNEY -->
+<section id="story" class="section">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <p class="eyebrow">Our Journey — 挑戦の流れ</p>
+      <h2>オキシンの活動として、<wbr>この挑戦を。</h2>
+      <p>沖縄進学支援会の想いから、ギネス世界記録への3年間の道のりまで</p>
+    </div>
+    <div class="story-flow rv">
+      <div class="story-step">
+        <div class="story-num">01</div>
+        <div class="story-icon" aria-hidden="true">🌱</div>
+        <h3>きっかけ</h3>
+        <p class="story-lead">進学の夢を、諦めさせたくない。</p>
+        <p>沖縄には、家庭の事情で進学の夢を諦めざるを得ない子どもたちがいます。オキシンは、その現状に「大丈夫、応援する大人はここにいる」と応えるために立ち上げた団体です。</p>
+      </div>
+      <div class="story-arrow" aria-hidden="true">→</div>
+      <div class="story-step">
+        <div class="story-num">02</div>
+        <div class="story-icon" aria-hidden="true">🎤</div>
+        <h3>なぜギネスなのか</h3>
+        <p class="story-lead">活動を、広く社会に届ける旗として。</p>
+        <p>支援活動は静かに続けるだけでは、必要としている人に届きません。「オキシンという活動がある」と沖縄・全国・世界に知ってもらうための旗として、ギネス世界記録に挑みます。</p>
+      </div>
+      <div class="story-arrow" aria-hidden="true">→</div>
+      <div class="story-step">
+        <div class="story-num">03</div>
+        <div class="story-icon" aria-hidden="true">🏆</div>
+        <h3>3年間の道のり</h3>
+        <p class="story-lead">段階的に、確実に、世界一へ。</p>
+        <p><strong>2026年 沖縄一（153時間） → 2027年 日本一 → 2028年 世界一（900時間超）</strong>。一歩ずつ体制を強化しながら、無理なく確実に世界記録へ届く3年計画です。</p>
+      </div>
+      <div class="story-arrow" aria-hidden="true">→</div>
+      <div class="story-step">
+        <div class="story-num">04</div>
+        <div class="story-icon" aria-hidden="true">🎓</div>
+        <h3>集まった力を、支援へ</h3>
+        <p class="story-lead">挑戦の熱量が、子どもたちへ届く。</p>
+        <p>チャレンジで集まった支援は、そのままオキシンの活動費に。第一歩は<strong>制服リユース寄贈</strong>、来年度以降はランドセル・学用品支援へと展開拡大していきます。</p>
+      </div>
+    </div>
+    <div class="story-cta rv rv-d2">
+      <a href="#cd-section" class="btn-outline">3年間の道のりを見る ↓</a>
+    </div>
+  </div>
 </section>
 
 <!-- COUNTDOWN -->
@@ -1135,6 +1253,7 @@
     </div>
     <div class="footer-sub">GUINNESS WORLD RECORD CHALLENGE 2028 — 歌でつなぐ、進学の光</div>
     <div class="footer-links">
+      <a href="#story">流れ</a>
       <a href="#roadmap">ロードマップ</a>
       <a href="#recruit">参加募集</a>
       <a href="#charity">支援活動</a>
