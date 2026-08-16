@@ -474,7 +474,28 @@
     #owner { background: var(--bg); }
     .owner-wrap { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: start; padding: 0; border: none; border-radius: 0; max-width: 1000px; margin: 0 auto; }
     .owner-ph-sticky { position: sticky; top: 96px; }
-    .owner-ph { background: var(--bg2); border: 1px solid var(--line); aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+    .owner-ph { background: var(--bg2); border: 1px solid var(--line); aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; overflow: hidden; }
+    .owner-ph-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .owner-ph-caption { text-align: center; margin-top: 14px; font-family: var(--font-serif); font-weight: 900; font-size: 15px; color: var(--ink); line-height: 1.5; }
+    .owner-ph-caption small { display: block; margin-top: 4px; font-family: var(--font-sans); font-size: 11px; letter-spacing: .1em; color: var(--ink-m); font-weight: 400; }
+    /* 物語中の写真 (owner-family.jpg 等) */
+    .story-figure {
+      margin: 24px 0;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(0,0,0,.06);
+    }
+    .story-figure img { width: 100%; height: auto; display: block; }
+    .story-figure figcaption {
+      padding: 14px 20px 18px;
+      font-size: 13px;
+      color: var(--ink-s);
+      line-height: 1.7;
+      font-family: var(--font-sans);
+      text-align: left;
+    }
     .owner-ph .mic { font-size: 64px; filter: drop-shadow(0 0 20px rgba(201,168,76,.35)); }
     .owner-ph small { font-size: 11px; color: var(--ink-m); }
     .owner-badge-row { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
@@ -1167,9 +1188,9 @@
     <div class="owner-wrap rv">
       <div class="owner-ph-sticky">
         <div class="owner-ph">
-          <div class="mic">🎤</div>
-          <small>写真掲載予定</small>
+          <img src="assets/owner-toma.jpg" alt="當眞嗣剛 - 沖縄進学支援会オキシン代表" class="owner-ph-img">
         </div>
+        <p class="owner-ph-caption">代表・當眞嗣剛<br><small>沖縄進学支援会（オキシン）</small></p>
       </div>
       <div>
         <div class="owner-badge-row">
@@ -1196,6 +1217,12 @@
           <h3 class="story-h">シングルファザーとして、子どもと向き合ってきて</h3>
           <p>子育ては、楽しいことばかりではありません。<br>お金のこと、学校のこと、将来のこと。</p>
           <p>親として「なんとかしてあげたい」と思っても、<em>一人ではどうにもならないこと</em>だってあります。</p>
+
+          <figure class="story-figure">
+            <img src="assets/owner-family.jpg" alt="息子と父子二人で二輪日本一周（2020年）">
+            <figcaption>2020年、コロナ禍の年。当時小学6年生の息子と2人で二輪日本一周へ。父子で走った1万数千キロが、今も自分の背中を支えています。</figcaption>
+          </figure>
+
           <p>僕もこれまで、親としていろんなことを考えながら、子どもと向き合ってきました。だからこそ、ずっと思っていることがあります。</p>
           <p><strong>親の置かれている環境や家庭の事情だけで、子どもがやりたいことや、進みたい道を諦めることがあってほしくない。</strong></p>
           <p>大きなことはできなくても、自分たちにできることはあるんじゃないか。そんな想いが、少しずつ強くなっていきました。</p>
