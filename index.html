@@ -338,8 +338,31 @@
     .rm-card:hover { border-color: rgba(201,168,76,.35); }
     .rm-card.active { border-color: rgba(196,18,48,.5); background: linear-gradient(135deg,rgba(196,18,48,.07) 0%,var(--bg2) 50%); }
     .rm-phantom { position: absolute; right: -16px; bottom: -24px; font-family: var(--font-serif); font-size: 140px; font-weight: 900; color: rgba(201,168,76,.04); line-height: 1; pointer-events: none; }
-    .rm-badge { font-size: 10px; letter-spacing: .22em; font-weight: 700; color: var(--ink-m); font-family: var(--font-sans); }
-    .rm-badge.now { color: var(--red-lt); }
+    .rm-badge {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: .16em;
+      font-weight: 900;
+      color: var(--gold-dk);
+      font-family: var(--font-sans);
+      background: rgba(201,168,76,.14);
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(201,168,76,.35);
+    }
+    .rm-badge.now {
+      color: #fff;
+      background: var(--red);
+      border-color: var(--red);
+      box-shadow: 0 4px 14px rgba(196,18,48,.35);
+    }
+    .rm-badge.now::before {
+      content: '●';
+      display: inline-block;
+      margin-right: 6px;
+      color: #fff;
+      animation: blink 1.4s ease-in-out infinite;
+    }
     .rm-year { font-family: var(--font-serif); font-size: clamp(52px,5.5vw,80px); font-weight: 900; color: var(--gold); line-height: 1; margin: 10px 0 2px; }
     .rm-aniv { font-size: 12px; color: var(--ink-m); letter-spacing: .05em; margin-bottom: 16px; }
     .rm-hours { font-family: var(--font-serif); font-size: clamp(36px,4vw,56px); font-weight: 900; line-height: 1; color: var(--gold-lt); }
@@ -996,7 +1019,7 @@
       <div class="ev-card">
         <h3>参加費</h3>
         <div class="val">5,000円</div>
-        <p>チャリティ歌唱「1曲100円カンパ」も企画中。カンパ分は全額寄付。</p>
+        <p>Campfireページから参加申込。集まった支援はオキシンの活動費に充当します。</p>
       </div>
       <div class="ev-card">
         <h3>配信</h3>
